@@ -1,0 +1,21 @@
+// Configuración
+
+@import "config/reset.scss";
+@import "config/funciones.scss";
+@import "config/fuentes.scss";
+@import "config/colores.scss";
+
+// Layout
+
+@import "layout/breakpoints.scss";
+@import "layout/layout.scss";
+
+// Componentes
+
+@import "componentes/header.scss";
+@import "componentes/main.scss";
+@import "componentes/footer.scss";
+
+// Elementos
+
+// Animaciones
