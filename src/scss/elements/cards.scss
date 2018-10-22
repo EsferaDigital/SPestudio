@@ -1,0 +1,17 @@
+.card-team{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  padding-bottom: 0;
+  color: white;
+  & img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 2px solid green;
+  }
+  & p{
+    width: 100%;
+  }
+}

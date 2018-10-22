@@ -1,0 +1,22 @@
+.c-body{
+  display: grid;
+  grid-template-areas: 
+              "header"
+              "main"
+              "footer";
+  grid-template-rows: 3.5rem 1fr 4rem;
+}
+
+.c-header{
+  grid-area: header;
+  border: 1px solid red;
+}
+.c-main{
+  grid-area: main;
+  border: 1px solid green;
+}
+
+.c-footer{
+  grid-area: footer;
+  border: 1px solid yellow;
+}

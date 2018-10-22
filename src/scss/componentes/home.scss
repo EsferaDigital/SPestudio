@@ -1,0 +1,16 @@
+.c-home{
+  &-banner{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(https://picsum.photos/1440/600);
+  }
+  &-team{
+    height: auto;
+    background-color: color(primary);
+  }
+  &-proyect{
+    padding: 1rem;
+    border: 2px solid orangered;
+  }
+}

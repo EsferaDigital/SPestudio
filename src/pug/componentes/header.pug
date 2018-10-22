@@ -1,18 +1,22 @@
 header#mainHeader.c-header
   h1.c-header-logo
    a(href="#")
-    img(src="img/logo.jpg", alt="Logo SPestudio")
-  #openMenu.c-header-menu.icon-menu
+    img(src="img/logo1.jpg", alt="Logo SPestudio")
+  i#openMenu.c-header-menu.icon-menu
   nav#mainNav.c-nav
-    ul
-      #closeMenu.icon-close
-      li
-        a(href="#").link Home
-      li
+    i#closeMenu.icon-close.c-nav-close
+    ul.c-nav-menu
+      li.c-nav-menu-item
+        a(href="http://localhost:3000/").link Home
+      li.c-nav-menu-item
         a(href="#").link Servicios
-      li
+      li.c-nav-menu-item
         a(href="#").link Nosotras
-      li
-        a(href="#").link Proyectos
-      li
+      li.c-nav-menu-item
+        a(href="http://localhost:3000/proyectos.html").link Proyectos
+      li.c-nav-menu-item
         a(href="#").link Contacto
+    div.c-nav-sociales
+      i.icon-facebook
+      i.icon-twitter
+      i.icon-instagram

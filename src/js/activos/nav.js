@@ -13,7 +13,7 @@ function showMenu(){
 // Ejecutamos las funciones
 
 document.addEventListener('click', e => {
-  if(e.target !== mainNav && e.target !== toggleMenu) hideMenu()
+  if(e.target !== mainNav && e.target !== openMenu) hideMenu()
 });
 
 mainNav.addEventListener('mouseleave', hideMenu);
