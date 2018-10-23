@@ -2,29 +2,38 @@
   display: flex;
   flex-wrap: wrap;
   padding: 1.5rem;
-  padding-bottom: 0;
   color: white;
   & img{
     display: block;
     width: 100%;
     height: 100%;
     margin: auto;
-    border: 2px solid green;
+    // border: 2px solid green;
   }
   & p{
     width: 100%;
+    letter-spacing: 1px;
+  }
+  &-name{
+    margin-top: 1rem;
+    font-size: 2rem;
   }
   &-role{
     position: relative;
     z-index: 1;
+    margin: 1rem auto;
+    font-weight: 600;
     &::before{
-      border-top: 2px solid white;
-      width: 50%;
+      border-top: 1px solid color(secondary);
+      width: 40%;
       top: 50%;
       right: 0;
       content: "";
       position: absolute;
       z-index: -1;
     }
+  }
+  &-description{
+    letter-spacing: 1px;
   }
 }

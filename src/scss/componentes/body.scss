@@ -4,19 +4,22 @@
               "header"
               "main"
               "footer";
-  grid-template-rows: 3.5rem 1fr 4rem;
+  grid-template-rows: 3.5rem 1fr 8rem;
+  @include mq(mdl){
+    grid-template-rows: 5rem 1fr 8rem;
+  }
 }
 
 .c-header{
   grid-area: header;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 .c-main{
   grid-area: main;
-  border: 1px solid green;
+  // border: 1px solid green;
 }
 
 .c-footer{
   grid-area: footer;
-  border: 1px solid yellow;
+  // border: 1px solid yellow;
 }

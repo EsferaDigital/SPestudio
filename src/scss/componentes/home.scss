@@ -36,7 +36,23 @@
     background-color: color(primary);
   }
   &-proyect{
-    padding: 1.5rem;
+    padding: 5rem 1.5rem;
     // border: 2px solid orangered;
+    &-title{
+      position: relative;
+      z-index: 1;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+      &::before{
+        border-top: 2px solid black;
+        width: 40%;
+        top: 50%;
+        right: 0;
+        content: "";
+        position: absolute;
+        z-index: -1;
+      }
+    }
   }
 }
