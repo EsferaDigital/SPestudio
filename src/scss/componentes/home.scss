@@ -1,16 +1,42 @@
 .c-home{
   &-banner{
+    display: block;
+    width: 100%;
+    height: 35vh;
+    padding: 1.5rem;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-image: url(https://picsum.photos/1440/600);
+    background-image: img('banner.jpg');
+    &-title{
+      font-size: 1.5rem;
+      font-weight: $light;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    &-btn{
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: .3rem;
+      padding-right: 0;
+      border-radius: 5px;
+      &:hover{
+        color: black;
+        background-color: white;
+      }
+      & i{
+        font-size: .8rem;
+        padding-left: 4px;
+      }
+    }
   }
   &-team{
     height: auto;
     background-color: color(primary);
   }
   &-proyect{
-    padding: 1rem;
-    border: 2px solid orangered;
+    padding: 1.5rem;
+    // border: 2px solid orangered;
   }
 }

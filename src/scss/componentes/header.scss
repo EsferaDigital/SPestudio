@@ -31,29 +31,46 @@
               "close"
               "menu"
               "sociales";
-  grid-template-rows: 4rem 10rem 2rem; 
+  grid-template-rows: 4rem 12rem 2rem; 
   top: 0;
   right: -$off-canvas;
   width: $off-canvas;
   height: 100vh;
   z-index: z-index(capa5);
-  background-color: color(primary2);
+  background-color: color(primary1);
   transition: all .4s ease;
   &-close{
     grid-area: close;
     justify-self: end;
     padding-top: 1rem;
     padding-right: .5rem;
-    border: 1px solid purple;
+    // border: 1px solid purple;
   }
   &-menu{
     grid-area: menu;
-    border: 2px solid red;
+    // border: 2px solid red;
+    &-item{
+      padding: .5rem;
+      padding-left: 1rem;
+      border-bottom: .3px solid color(border);
+      & a{
+        color: color(bg);
+        text-transform: uppercase;
+      }
+    }
+    &-item:first-child{
+      border-top: .3px solid color(border); 
+    }
   }
   &-sociales{
     grid-area: sociales;
     justify-self: center;
-    border: 2px solid yellow;
+    color: color(text);
+    // border: 2px solid yellow;
+    & i{
+      padding: .5rem;
+      font-size: 1.2rem;
+    }
   }
 }
 
