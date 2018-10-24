@@ -1,2 +1,18 @@
 main.c-main
-  section.c-contacto Hola contacto
+  section.c-contacto
+    .c-contacto-header
+      h1 Contacto
+      i.icon-mail contacto@spestudio.com
+      i.icon-phone +56 9 12345678
+    .c-contacto-form
+      form(action="enviar.php", id="formulario", name="formulario" method="post", class="c-form")
+        .c-form-item
+          input(type="text" id="nombre" name="nombre" placeholder="Nombre" class="c-form-input")
+        .c-form-item
+          input(type="email" id="email" name="email" placeholder="Correo" class="c-form-input")
+        .c-form-item
+          input(type="text" id="asunto" name="asunto" placeholder="Asunto" class="c-form-input")
+        .c-form-item
+          textarea(id="mensaje" name="mensaje" placeholder="Mensaje" class="c-form-text")
+        .c-form-item
+          button(type="submit" id="btnSend" class="c-form-btn") Enviar

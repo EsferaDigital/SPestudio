@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="description" content="Pongase en contacto">
     <link href="https://file.myfontastic.com/mvpawRadda82wfVXeddC3n/icons.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/styles.css?t=1540404047591">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body class="c-body" id="body">
     <header class="c-header" id="mainHeader">
@@ -24,7 +24,30 @@
       </nav>
     </header>
     <main class="c-main">
-      <section class="c-contacto">Hola contacto</section>
+      <section class="c-contacto">
+        <div class="c-contacto-header">
+          <h1>Contacto</h1><i class="icon-mail">contacto@spestudio.com</i><i class="icon-phone">+56 9 12345678</i>
+        </div>
+        <div class="c-contacto-form">
+          <form class="c-form" action="enviar.php" id="formulario" name="formulario" method="post">
+            <div class="c-form-item">
+              <input class="c-form-input" type="text" id="nombre" name="nombre" placeholder="Nombre">
+            </div>
+            <div class="c-form-item">
+              <input class="c-form-input" type="email" id="email" name="email" placeholder="Correo">
+            </div>
+            <div class="c-form-item">
+              <input class="c-form-input" type="text" id="asunto" name="asunto" placeholder="Asunto">
+            </div>
+            <div class="c-form-item">
+              <textarea class="c-form-text" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
+            </div>
+            <div class="c-form-item">
+              <button class="c-form-btn" type="submit" id="btnSend">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="c-footer"><i class="icon-up" id="up"></i>
       <div class="c-footer-sociales"><i class="icon-facebook"></i><i class="icon-instagram"></i></div>
@@ -37,5 +60,5 @@
     </footer>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="js/all.min.js?t=1540404047591"></script>
+  <script src="js/all.min.js"></script>
 </html>

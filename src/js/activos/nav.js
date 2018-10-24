@@ -20,4 +20,17 @@ mainNav.addEventListener('mouseleave', hideMenu);
 openMenu.addEventListener('click', showMenu);
 closeMenu.addEventListener('click', hideMenu);
 
+// Funcion subir
+
+function efectos(){
+  $('#up').on('click', function(){
+    $('html, body').animate({
+      scrollTop: 0,
+      scrollLeft: 0
+    }, 1000);
+  });
+}
+
+$(document).ready(efectos);
+
 
