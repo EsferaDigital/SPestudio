@@ -1,39 +1,65 @@
 .card-team{
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 1.5rem;
   color: white;
+  // border: 1px solid red;
+  &:first-child{
+    margin-bottom: 1rem;
+    @include mq(mdl){
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.card-team-item{
+  display: block;
+  width: 100%;
+  // border: 2px solid green;
+  @include mq(mdl){
+    width: 50%;
+  }
   & img{
     display: block;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    // border: 2px solid green;
   }
   & p{
-    width: 100%;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
   }
   &-name{
-    margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    margin: .5rem 0;
   }
   &-role{
     position: relative;
     z-index: 1;
-    margin: 1rem auto;
     font-weight: 600;
-    &::before{
-      border-top: 1px solid color(secondary);
-      width: 40%;
-      top: 50%;
-      right: 0;
-      content: "";
+    margin-bottom: .5rem;
+    &:before{
       position: absolute;
       z-index: -1;
+      content: "";
+      top: 50%;
+      right: 0;
+      width: 40%;
+      border-top: 1px solid white;
+      @include mq(mdl){
+        width: 50%;
+      }
     }
   }
   &-description{
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+  }
+  &:nth-child(odd){
+    margin: auto;
+    @include mq(mdl){
+      padding: .5rem 2rem;
+    }
+  }
+  &:nth-child(even){
+    padding: .5rem;
+    @include mq(mdl){
+      padding: 0 1rem;
+    }
   }
 }

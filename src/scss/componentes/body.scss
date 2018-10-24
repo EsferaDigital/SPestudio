@@ -4,10 +4,7 @@
               "header"
               "main"
               "footer";
-  grid-template-rows: 3.5rem 1fr 8rem;
-  @include mq(mdl){
-    grid-template-rows: 5rem 1fr 8rem;
-  }
+  grid-template-rows: minmax(min-content, max-content) 1fr 8rem;
 }
 
 .c-header{
