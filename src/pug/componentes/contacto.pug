@@ -5,7 +5,7 @@ main.c-main
       i.icon-mail contacto@spestudio.com
       i.icon-phone +56 9 12345678
     .c-contacto-form
-      form(action="enviar.php", id="formulario", name="formulario" method="post", class="c-form")
+      form(action="enviar.php", id="formulario", name="formulario" method="POST", class="c-form")
         .c-form-item
           input(type="text" id="nombre" name="nombre" placeholder="Nombre" class="c-form-input")
         .c-form-item
@@ -15,4 +15,5 @@ main.c-main
         .c-form-item
           textarea(id="mensaje" name="mensaje" placeholder="Mensaje" class="c-form-text")
         .c-form-item
-          button(type="submit" id="btnSend" class="c-form-btn") Enviar
+          button(type="submit" id="btnSend" name="enviar" value="Enviar" class="c-form-btn") Enviar
+        #enviado

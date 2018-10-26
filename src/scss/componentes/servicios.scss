@@ -1,3 +1,27 @@
+.c-servicios-title{
+  font-size: 1.7rem;
+  position: relative;
+  z-index: 1;
+  padding: 2rem $gutter;
+  letter-spacing: 1px;
+  font-weight: 500;
+  @include mq(mdl){
+    font-size: 2.5rem;
+  }
+  &::before{
+    border-top: 1px solid black;
+    width: 45%;
+    top: 50%;
+    right: $gutter;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    @include mq(mdl){
+      width: 77%;
+    }
+  }
+}
+
 .c-servicios{
   display: grid;
   grid-template-areas: 
@@ -7,6 +31,10 @@
                 "vitrinas";
   grid-template-rows: repeat(4, minmax(min-content, max-content));
   border: 2px solid red;
+  &-description{
+    padding: 0 .5rem 0 0;
+    border: 2px solid orangered;
+  }
 }
 
 .c-servicios-item{
@@ -14,16 +42,30 @@
   width: 100%;
   flex-wrap: wrap;
   background-color: color(secondary);
+  padding: .5rem $gutter 1rem;
   border: 1px solid green;
   &:nth-child(even){
     background-color: white;
+    & .c-servicios-description{
+      border: 2px solid purple;
+      padding-left: .5rem;
+    }
   }
   & img{
     display: block;
   }
-  & h2{
-    font-size: 1.5rem;
+  & h2, p{
+    font-size: 1.3rem;
+    font-weight: 500;
     padding: .5rem 0;
+    letter-spacing: 1px;
+  }
+  & p{
+    font-size: 1rem;
+    padding-bottom: 0;
+    &:last-child{
+      padding-bottom: 1rem;
+    }
   }
 }
 
@@ -35,5 +77,7 @@
 }
 
 .c-servicios-img-par{
-  order: -1;
+  @include mq(mdl){
+    order: -1;
+  }
 }

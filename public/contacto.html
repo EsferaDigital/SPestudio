@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="description" content="Pongase en contacto">
     <link href="https://file.myfontastic.com/mvpawRadda82wfVXeddC3n/icons.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css?t=1540520039498">
   </head>
   <body class="c-body" id="body">
     <header class="c-header" id="mainHeader">
@@ -29,7 +29,7 @@
           <h1>Contacto</h1><i class="icon-mail">contacto@spestudio.com</i><i class="icon-phone">+56 9 12345678</i>
         </div>
         <div class="c-contacto-form">
-          <form class="c-form" action="enviar.php" id="formulario" name="formulario" method="post">
+          <form class="c-form" action="enviar.php" id="formulario" name="formulario" method="POST">
             <div class="c-form-item">
               <input class="c-form-input" type="text" id="nombre" name="nombre" placeholder="Nombre">
             </div>
@@ -43,8 +43,9 @@
               <textarea class="c-form-text" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
             </div>
             <div class="c-form-item">
-              <button class="c-form-btn" type="submit" id="btnSend">Enviar</button>
+              <button class="c-form-btn" type="submit" id="btnSend" name="enviar" value="Enviar">Enviar</button>
             </div>
+            <div id="enviado"></div>
           </form>
         </div>
       </section>
@@ -58,7 +59,7 @@
         <p>Desarrollado por<a href="https://esferadigital.cl" target="_blank"> Esfera Digital</a></p>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/contacto.js?t=1540520039498"></script>
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="js/all.min.js"></script>
 </html>

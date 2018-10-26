@@ -1,32 +1,53 @@
 // Para que las cajas no queden tan anchas hay que darle padding a cada una en distintos tamaños
 
 .c-home{
-  --varpadding: 1.5rem;
-  @include mq(mdl){
-    --varpadding: 2rem 3rem;
-  }
   &-banner{
-    display: block;
+    display: grid;
     width: 100%;
     height: 35vh;
-    padding: var(--varpadding);
+    padding: 0 $gutter;
+    align-items: center;
+    grid-template-areas: 
+                  "title"
+                  "btn";
+    grid-template-rows: 1fr 40%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-image: img('banner.jpg');
+    @include mq(mdl){
+      height: 80vh;
+      padding: 0 7rem;
+    }
     &-title{
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       font-weight: $light;
       margin-bottom: 1rem;
       color: white;
+      // border: 2px solid red;
+      @include mq(mdl){
+        font-size: 5rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
     }
     &-btn{
+      grid-area: btn;
+      align-self: center;
+      width: 110px;
+      height: 42px;
       background-color: transparent;
       border: 2px solid white;
       color: white;
-      padding: .3rem;
-      padding-right: 0;
+      padding: .6rem 0 .3rem .7rem;
       border-radius: 5px;
+      @include mq(mdl){
+        width: 16%;
+        height: 33%;
+        font-size: 1.8rem;
+        border: 3px solid white;
+        padding: .6rem 0 .7rem .8rem;
+      }
       &:hover{
         color: black;
         background-color: white;
@@ -34,23 +55,30 @@
       & i{
         font-size: .8rem;
         padding-left: 4px;
+        @include mq(mdl){
+          position: relative;
+          top: -2px;
+          left: 2px;
+          font-size: 1rem;
+        }
       }
     }
   }
   &-team{
     height: auto;
     background-color: color(primary);
-    padding: var(--varpadding);
+    padding: 2rem $gutter;
     // border: 1px solid yellow;
   }
   &-proyect{
-    padding: var(--varpadding);
+    padding: 2rem $gutter;
     // border: 2px solid orangered;
     &-title{
       position: relative;
       z-index: 1;
       font-size: 2rem;
       margin-bottom: 1rem;
+      font-weight: 500;
       letter-spacing: 1px;
       &::before{
         border-top: 2px solid black;
