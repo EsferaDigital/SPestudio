@@ -39,11 +39,11 @@
 .c-nav{
   position: fixed;
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
               "close"
               "menu"
               "sociales";
-  grid-template-rows: 11% 12rem 2rem; 
+  grid-template-rows: 11% 12rem 2rem;
   top: 0;
   right: -$off-canvas;
   width: $off-canvas;
@@ -80,15 +80,15 @@
       }
     }
     &-item:first-child{
-      border-top: .3px solid color(border); 
+      border-top: .3px solid color(border);
     }
   }
   &-sociales{
     grid-area: sociales;
     justify-self: center;
-    color: color(text);
     // border: 2px solid yellow;
     & i{
+      color: color(text);
       padding: .5rem;
       font-size: 1.2rem;
     }

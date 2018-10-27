@@ -1,10 +1,13 @@
 .c-body{
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
               "header"
               "main"
               "footer";
   grid-template-rows: minmax(min-content, max-content) 1fr 8rem;
+  @include mq(mdl){
+    grid-template-rows: minmax(min-content, max-content) 1fr 6rem;
+  }
 }
 
 .c-header{
@@ -13,7 +16,9 @@
 }
 .c-main{
   grid-area: main;
-  // border: 1px solid green;
+  // background-color: color(bg);
+  // border: 3px solid green;
+  // padding: 0 5rem;
 }
 
 .c-footer{

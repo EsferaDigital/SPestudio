@@ -1,5 +1,11 @@
 .c-nosotras{
-  border: 2px solid red;
+  background-color: color(secondary);
+  // border: 2px solid red;
+  &-title{
+    @include titulos;
+    padding: 0 $gutter;
+    padding-top: 1rem;
+  }
   &-team{
     background-color: color(primary);
   }

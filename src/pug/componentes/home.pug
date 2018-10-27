@@ -1,25 +1,19 @@
 main.c-main
   div.c-home
     section.c-home-banner
-      h2.c-home-banner-title Diseñamos espacios, construimos experiencias...
-      a(href="http://localhost:3000/proyectos.html").c-home-banner-btn Saber más
-        i.icon-right
+      div.c-home-banner-item1
+        h2 Diseñamos espacios, construimos experiencias
+      div.c-home-banner-item2
+        a(href="http://localhost:3000/proyectos.html") Saber más
+          i.icon-right
     section.c-home-team
-      figure.card-team
-        .card-team-item
-          img(src="img/valentina.jpg" alt="Valentina Praus")
-        .card-team-item
-          p.card-team-item-name Valentina Praus
-          P.card-team-item-role Socia Fundadora
-          P.card-team-item-description Diseñadora Industrial y Licenciada en diseño de Objetos de la Pontificia Universidad Católica de Valparaíso. Se ha especializado en diseño de tienda, retail marketing y branding corporativo para diseñar espacios habitables de forma integral y experiencial, cumpliendo con las necesidades de un exigente mercado.
-      figure.card-team
-        .card-team-item
-          img(src="img/stephani.jpg" alt="Stephani Semmler")
-        .card-team-item
-          p.card-team-item-name Stephani Semmler
-          P.card-team-item-role Socia Fundadora
-          P.card-team-item-description Diseñadora de Ambientes Duoc UC, con un Máster en Infoarquitectura Barcelona, España. Y curso en Marketing y Ventas en Universidad de Chile, Santiago.
-            |  Se ha especializado en diseño y construcción de locales comerciales en la V región. Generando una línea conectora entre la funcionalidad de los espacios y lo estético.
+      .c-home-team-title
+        h2 Fundadoras
+      .c-home-team-img
+        a(href="https://esfera-digital.000webhostapp.com/nosotras.html")
+          img(src="img/team.jpg", alt="Fundadoras")
+      .c-home-team-descripcion
+        p SP Estudio Diseño y Remodelaciones nace como el emprendimiento de dos diseñadoras viñamarinas que, luego de trabajar en el mundo privado del diseño comercial, reconocen la tendencia en muchos dueños y empresarios de locales pequeños y medianos de la región, de querer invertir para el diseño y refacción de sus espacios comerciales, con la finalidad de refrescar sus marcas y posicionarse entre sus pares.
     section.c-home-proyect
       h2.c-home-proyect-title Proyectos
       include slider

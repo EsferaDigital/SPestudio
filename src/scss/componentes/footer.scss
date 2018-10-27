@@ -1,15 +1,27 @@
 .c-footer{
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
                 "up"
                 "sociales"
                 "right"
                 "creditos";
   grid-template-rows: repeat(4, 1fr);
   justify-items: center;
+  @include mq(mdl){
+    grid-template-areas:
+                  "right sociales up"
+                  " . creditos . ";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+  }
   &-sociales i{
     font-size: 1.2rem;
     color: color(text);
+    @include mq(mdl){
+      font-size: 1.5rem;
+      padding: 0 1rem;
+    }
   }
   &-right{
     color: color(text);
@@ -21,13 +33,36 @@
       & a{
         font-size: .9rem;
         color: #249edb;
+        &:hover{
+          color: rgba(36, 158, 219, 0.719);
+        }
       }
     }
   }
 }
 
 #up{
+  grid-area: up;
   color: color(text);
   font-size: 2.5rem;
   cursor: pointer;
+  @include mq(mdl){
+    font-size: 3rem;
+  }
+}
+
+.c-footer-sociales{
+  grid-area: sociales;
+}
+
+.c-footer-right{
+  grid-area: right;
+}
+
+.c-footer-creditos{
+  grid-area: creditos;
+  @include mq(mdl){
+    align-self: end;
+    padding: .5rem 0;
+  }
 }

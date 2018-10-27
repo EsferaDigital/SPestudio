@@ -1,0 +1,17 @@
+@mixin titulos{
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  &::before{
+    border-top: 2px solid black;
+    width: 30%;
+    top: 50%;
+    right: 0;
+    content: "";
+    position: absolute;
+    z-index: -1;
+  }
+}

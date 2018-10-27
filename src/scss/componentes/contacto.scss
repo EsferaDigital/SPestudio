@@ -1,3 +1,59 @@
+.c-contacto{
+  background-color: color(secondary);
+  // border: 2px solid red;
+  &-header{
+    padding: 1rem;
+    & h1{
+      @include titulos;
+      font-weight: 600;
+    }
+    & i{
+      display: block;
+      margin: 1rem 0;
+    }
+  }
+  &-form{
+    padding: 1rem;
+  }
+}
+
+.c-form{
+  // border: 2px solid green;
+  width: 100%;
+  max-width: 50%;
+
+  & item{
+    width: 100%;
+  }
+  & input, textarea{
+    width: 100%;
+    border: transparent;
+    border-bottom: 3px solid black;
+    padding: 1rem 0;
+  }
+  & textarea{
+    padding-bottom: 3rem;
+  }
+  &-btn{
+    @include boton-cta;
+    width: 5rem;
+    color: white;
+    background-color: black;
+    font-size: 1rem;
+    margin-top: .5rem;
+    border-color: black;
+    @include mq(mdl){
+      width: 7rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+
+
+
+
 // Modal errores
 
 .modal-errores{

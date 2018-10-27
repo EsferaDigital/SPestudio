@@ -28,6 +28,9 @@
   &-name{
     font-size: 1.7rem;
     margin: .5rem 0;
+    @include mq(mdl){
+      font-size: 2.5rem;
+    }
   }
   &-role{
     position: relative;
@@ -49,15 +52,20 @@
   }
   &-description{
     letter-spacing: 2px;
+    @include mq(mdl){
+      font-size: 1.5rem;
+    }
   }
   &:nth-child(odd){
     margin: auto;
+    // border: 2px solid purple;
     @include mq(mdl){
       padding: .5rem 2rem;
     }
   }
   &:nth-child(even){
     padding: .5rem;
+    // background-color: color(secondary);
     @include mq(mdl){
       padding: 0 1rem;
     }
