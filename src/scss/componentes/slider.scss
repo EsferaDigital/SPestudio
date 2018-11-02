@@ -1,46 +1,23 @@
 .c-slider{
   position: relative;
   width: 100%;
-  height: 200px;
-  margin: auto;
   overflow: hidden;
   // border: 2px solid green;
 }
 
 .slider{
   display: flex;
-  width: 1100%;
+  width: 300%;
+  height: 200%;
   &-section{
     width: 100%;
-    position: relative;
-    // border: 2px solid red;
+    & img{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
-
-.slider > section{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 200px;
-  background-color: yellow;
-  background-size: 272px 200px;
-  background-position: center;
-}
-
-.slider-img1{background-image: img('imagen1.webp');}
-.slider-img2{background-image: img('imagen2.webp');}
-.slider-img3{background-image: img('imagen3.webp');}
-.slider-img4{background-image: img('imagen4.webp');}
-.slider-img5{background-image: img('imagen5.webp');}
-.slider-img6{background-image: img('imagen6.webp');}
-.slider-img7{background-image: img('imagen7.webp');}
-.slider-img8{background-image: img('imagen8.webp');}
-.slider-img9{background-image: img('imagen9.webp');}
-.slider-img10{background-image: img('imagen10.webp');}
-.slider-img11{background-image: img('imagen11.webp');}
 
 .btn-prev, .btn-next{
   position: absolute;

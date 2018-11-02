@@ -96,7 +96,11 @@ gulp.task('imagemin', function () {
 // 7°Inicia el servidor en la carpeta public, observa y actualiza automaticamente los cambios realizados en los archivos; styles.scss, *.pug, *.js y *.html. Además mantiene las tareas programadas actualizandolas automaticamente.
 gulp.task('server', function () {
 
-	bs.init({server: "./public"})
+	bs.init({
+    server: {
+      baseDir: "./public"
+    }
+  });
 
 	gulp.watch('./src/pug/*/*.pug', ['pug2html']).on("change", bs.reload)
 	gulp.watch('./src/scss/*/*.scss', ['sass', 'cache']).on("change", bs.reload)

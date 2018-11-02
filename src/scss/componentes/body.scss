@@ -1,4 +1,6 @@
 .c-body{
+  position: relative;
+  z-index: z-index(capa1);
   display: grid;
   grid-template-areas:
               "header"

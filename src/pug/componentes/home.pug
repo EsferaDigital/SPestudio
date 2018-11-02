@@ -1,19 +1,34 @@
 main.c-main
   div.c-home
-    section.c-home-banner
-      div.c-home-banner-item1
-        h2 Diseñamos espacios, construimos experiencias
-      div.c-home-banner-item2
-        a(href="http://localhost:3000/proyectos.html") Saber más
-          i.icon-right
-    section.c-home-team
-      .c-home-team-title
-        h2 Fundadoras
-      .c-home-team-img
-        a(href="http://localhost:3000/nosotras.html")
-          img(src="img/team.jpg", alt="Fundadoras")
-      .c-home-team-descripcion
-        p SP Estudio Diseño y Remodelaciones nace como el emprendimiento de dos diseñadoras viñamarinas que, luego de trabajar en el mundo privado del diseño comercial, reconocen la tendencia en muchos dueños y empresarios de locales pequeños y medianos de la región, de querer invertir para el diseño y refacción de sus espacios comerciales, con la finalidad de refrescar sus marcas y posicionarse entre sus pares.
-    section.c-home-proyect
-      h2.c-home-proyect-title Proyectos
+    div.c-home-logo
+      img(src="img/spestudio.png")
+    section.c-home-slider
       include slider
+    section.c-home-servicios
+      h2 Servicios
+      .c-home-servicios-item
+        a(href="http://localhost:3000/servicios.html")
+          figure.c-figure
+            img(src="img/diseno.jpg", alt="Diseño").c-figure-frontal
+            figcaption.c-figure-trasera
+              h2.c-figure-trasera-t Diseño Locales Comerciales
+      .c-home-servicios-item
+        a(href="http://localhost:3000/servicios.html")
+          figure.c-figure
+            img(src="img/asesoria.jpg", alt="Asesoria").c-figure-frontal
+            figcaption.c-figure-trasera
+              h2.c-figure-trasera-t Asesoría de decoración integral
+      .c-home-servicios-item
+        a(href="http://localhost:3000/servicios.html")
+          figure.c-figure
+            img(src="img/hoteles.jpg", alt="Diseño de Hoteles").c-figure-frontal
+            figcaption.c-figure-trasera
+              h2.c-figure-trasera-t Diseño de Hoteles
+      .c-home-servicios-item
+        a(href="http://localhost:3000/servicios.html")
+          figure.c-figure
+            img(src="img/vitrinas.jpg", alt="Diseño de Vitrinas").c-figure-frontal
+            figcaption.c-figure-trasera
+              h2.c-figure-trasera-t Diseño de Vitrinas
+    section.c-home-proyectos
+      h2.c-home-proyect-title Proyectos

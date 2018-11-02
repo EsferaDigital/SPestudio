@@ -6,6 +6,7 @@
 
  $gutter: 1.5rem;
  $gutter-item: .5rem;
+ $gutter-margin: 3px;
 
  // variables para z-index
 
@@ -54,12 +55,12 @@
  $max-width: 1400px;
  $max-width-item: 1280px;
 
-.l-container{
-	max-width: $max-width;
-	margin: auto;
-}
+// .l-container{
+// 	max-width: $max-width;
+// 	margin: auto;
+// }
 
-.l-container-item{
-	max-width: $max-width-item;
-	margin: auto;
-}
+// .l-container-item{
+// 	max-width: $max-width-item;
+// 	margin: auto;
+// }

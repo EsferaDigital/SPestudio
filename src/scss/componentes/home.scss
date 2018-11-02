@@ -1,136 +1,117 @@
 // Para que las cajas no queden tan anchas hay que darle padding a cada una en distintos tamaños
 
 .c-home{
-  &-banner{
-    position: relative;
-    display: grid;
+  display: grid;
+  width: 100%;
+  height: auto;
+  &-logo img{
+    display: block;
+  }
+  &-servicios{
     width: 100%;
-    height: 37vh;
-    align-items: center;
-    grid-template-areas:
-                  ". title ."
-                  ". btn .";
-    grid-template-columns: $gutter 1fr $gutter;
-    grid-template-rows: 1fr 40%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-image: img('banner.jpg');
-    &::before{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
+    // margin: auto;
+    display: flex;
+    align-content: space-around;
+    // flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    // background-color: color(secondary);
+    // margin: auto;
+    // border: 2px solid green;
+    & h2{
       width: 100%;
-      height: 100%;
-      background-color: color(primary);
-      opacity: .6;
-    }
-    @include mq(mdl){
-      grid-template-columns: 4rem 1fr 4rem;
-      height: 80vh;
-    }
-    &-item1{
-      position: relative;
-      grid-area: title;
-      color: white;
-      // border: 2px solid red;
-      & h2{
-        padding: .5rem 0;
-        font-size: 1.8rem;
-        font-weight: 500;
-        letter-spacing: 1px;
-        @include mq(mdl){
-          font-size: 5.5rem;
-        }
+      padding: 1rem 0;
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
+      @include mq(mdl){
+        width: 95%;
       }
     }
-    &-item2{
-      position: relative;
-      grid-area: btn;
-      margin-top: .5rem;
-      align-self: start;
+    &-item{
+      width: 90%;
+      margin: .5rem auto;
       // border: 2px solid green;
-      @include mq(sm){
-        align-self: center;
+      @include mq(md){
+        width: 47%;
       }
       @include mq(mdl){
-        margin-top: 2rem;
+        width: 22%;
+      }
+      &:hover figure{
+        transform: perspective(600px) rotateY(180deg);
+        box-shadow: $shadow-tarjeta;
       }
       & a{
-        @include boton-cta;
-        & i{
-          position: relative;
-          font-size: .8rem;
-          left: 5px;
-          @include mq(mdl){
-            font-size: 1.2rem;
-          }
-        }
+        display: inline-block;
       }
     }
   }
-  &-team{
-    display: grid;
-    grid-template-areas:
-                  " . titulo . "
-                  " . img . "
-                  " . descripcion . ";
-    grid-template-columns: $gutter 1fr $gutter;
-    height: auto;
-    background-color: color(primary);
-    padding: 2rem $gutter;
-    // border: 1px solid yellow;
-    @include mq(mdl){
-      grid-template-areas:
-                    " . titulo titulo . "
-                    " . img descripcion . ";
-      grid-template-columns: $gutter 1fr 1fr $gutter;
-      grid-template-rows: 4rem 1fr
+  &-proyectos{
+    border: 2px solid red;
+  }
+}
 
+.c-figure-frontal, .c-figure-trasera{
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform ease .5s;
+}
+
+.c-figure{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  position: relative;
+  transition: transform ease .5s;
+  transform-style: preserve-3d;
+  transform: perspective(600px) rotateY(0deg);
+  & img{
+    display: block;
+  }
+  &-frontal{
+    display: block;
+  }
+  &-trasera{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+    color: white;
+    transform: perspective(600px);
+    transform: rotate3d(0,0,0);
+    backface-visibility: visible;
+    overflow: auto;
+    background-color: rgba(15, 15, 15, 0.7);
+    @include mq(lgm){
+      transform: rotate3d(0,1,0, 180deg);
+      backface-visibility: hidden;
     }
     & h2{
-      @include titulos;
-      color: white;
-      &:before{
-        border-top: 2px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto 0;
+      height: 80%;
+      line-height: 2rem;
+      text-align: center;
+      border: 2px solid color(secondary);
+      padding: 1rem;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      @include mq(mdl){
+        font-size: .8rem;
+        line-height: 1rem;
+      }
+      @include mq(lgm){
+        line-height: 2rem;
+        font-size: 1.5rem;
       }
     }
   }
-  &-proyect{
-    padding: 2rem $gutter;
-    // border: 2px solid orangered;
-    background-color: color(secondary);
-    @include mq(mdl){
-      padding: 2rem 4rem;
-    }
-    &-title{
-    @include titulos;
-    font-weight: 600;
-    }
-  }
 }
 
-.c-home-team-title{
-  grid-area: titulo;
-}
 
-.c-home-team-img{
-  grid-area: img;
-}
-
-.c-home-team-descripcion{
-  grid-area: descripcion;
-  color: white;
-  @include mq(mdl){
-    padding: 0 1rem;
-  }
-  & p{
-    letter-spacing: 1px;
-    font-family: $secondary-font;
-    padding: .5rem 0;
-    @include mq(mdl){
-      font-size: 1.5rem;
-    }
-  }
-}

@@ -1,10 +1,16 @@
 .c-header{
+  position: relative;
+  z-index: z-index(capa2);
+  background-color: white;
   display: grid;
   width: 100%;
   grid-template-areas: ". logo menu";
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  transition: all .4s ease;
+  // transition: all .4s ease;
+  @include mq(lgm){
+    grid-template-areas: "logo menu menu";
+  }
   &-logo{
     grid-area: logo;
     & a img{
@@ -33,6 +39,9 @@
       font-size: 1.3rem;
       font-weight: 200;
     }
+    @include mq(lgm){
+      display: none;
+    }
   }
 }
 
@@ -60,33 +69,73 @@
   @include mq(lgsH){
     grid-template-rows: 22% 12rem 2rem;
   }
+  @include mq(lgm){
+    grid-area: menu;
+    display: flex;
+    width: 100%;
+    align-self: center;
+    position: relative;
+    height: auto;
+    right: 0;
+    background-color: white;
+  }
   &-close{
     grid-area: close;
     justify-self: end;
     align-self: center;
     margin-right: 1rem;
     // border: 1px solid purple;
+    @include mq(lgm){
+      display: none;
+    }
   }
   &-menu{
     grid-area: menu;
     // border: 2px solid red;
+    @include mq(lgm){
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      // border: 2px solid red;
+    }
     &-item{
       padding: .5rem;
       padding-left: 1rem;
       border-bottom: .3px solid color(border);
+      @include mq(lgm){
+        padding: 0;
+        // border: 2px solid green;
+        border: none;
+        &:hover{
+          background-color: color(secondary);
+        }
+      }
       & a{
         color: color(bg);
         text-transform: uppercase;
+        @include mq(lgm){
+          display: block;
+          color: black;
+          padding: 1rem;
+          letter-spacing: 2px;
+          font-weight: 500;
+        }
       }
     }
     &-item:first-child{
       border-top: .3px solid color(border);
+      @include mq(lgm){
+        border: none;
+      }
     }
   }
   &-sociales{
     grid-area: sociales;
     justify-self: center;
     // border: 2px solid yellow;
+    @include mq(lgm){
+      display: none;
+    }
     & i{
       color: color(text);
       padding: .5rem;
