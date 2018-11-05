@@ -1,6 +1,6 @@
 .c-nuestro-estudio{
   background-color: color(secondary);
-  // border: 2px solid red;
+  border: 2px solid red;
   &-title{
     @include titulos;
     padding: 0 $gutter;
@@ -9,4 +9,46 @@
   &-team{
     background-color: color(primary);
   }
+}
+
+.c-valores{
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid green;
+}
+
+.c-valores-cards{
+  display: block;
+  // luego grid
+}
+
+.cards-valores{
+  margin: 0;
+}
+
+.cards-valores figcaption{
+  display: block;
+  padding: 1.5rem;
+  color: white;
+  border: 2px solid purple;
+  & h2{
+    font-weight: 500;
+    text-align: center;
+    padding: .5rem;
+  }
+  & hr{
+    border: 1px solid yellow;
+    margin: .5rem 0;
+  }
+  & p{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    padding: .5rem 0;
+  }
+}
+
+.valores-title{
+  display: none;
 }

@@ -25,10 +25,8 @@
   line-height: 2;
   padding: 0 .7rem;
   color: white;
-  background-color: transparent;
-  border: 3px solid white;
-  border-radius: 5px;
   font-size: .8rem;
+  border: none;
   @include mq(mdl){
     font-size: 1.7rem;
     padding: 0 1.2rem;
@@ -36,6 +34,47 @@
   &:hover{
     background-color: white;
     color: black;
+  }
+  &:active{
+    transform: scale(.95);
+  }
+}
+
+@mixin boton-enviar{
+  display: inline-block;
+  line-height: 1;
+  padding: 1rem;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border: none;
+  @include mq(lgm){
+    font-size: 1.3rem;
+  }
+  &:hover{
+    color: white;
+  }
+  &:active{
+    transform: scale(.95);
+  }
+}
+
+@mixin boton-cerrar{
+  display: inline-block;
+  line-height: 2;
+  padding: 0 .7rem;
+  color: black;
+  background-color: color(secondary);
+  font-size: .8rem;
+  border: none;
+  cursor: pointer;
+  @include mq(mdl){
+    font-size: 1.2rem;
+    padding: 0 1.2rem;
+  }
+  &:hover{
+    color: white;
+    background-color: black;
   }
   &:active{
     transform: scale(.95);

@@ -28,69 +28,23 @@
         width: 95%;
       }
     }
-    &-item{
-      width: 90%;
-      margin: .5rem auto;
-      // border: 2px solid green;
-      @include mq(md){
-        width: 47%;
-      }
-      @include mq(mdl){
-        width: 22%;
-      }
-      &:hover figure{
-        transform: perspective(600px) rotateY(180deg);
-        box-shadow: $shadow-tarjeta;
-      }
-      & a{
-        display: inline-block;
-      }
-    }
   }
   &-proyectos{
     border: 2px solid red;
   }
 }
 
-.c-figure-frontal, .c-figure-trasera{
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: transform ease .5s;
-}
-
-.c-figure{
-  width: 100%;
-  height: auto;
-  margin: 0;
-  position: relative;
-  transition: transform ease .5s;
-  transform-style: preserve-3d;
-  transform: perspective(600px) rotateY(0deg);
-  & img{
-    display: block;
+.cards-home{
+  @include mq(md){
+    width: 47%;
   }
-  &-frontal{
-    display: block;
+  @include mq(mdl){
+    width: 22%;
   }
-  &-trasera{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    padding: 1rem;
-    color: white;
-    transform: perspective(600px);
-    transform: rotate3d(0,0,0);
-    backface-visibility: visible;
-    overflow: auto;
-    background-color: rgba(15, 15, 15, 0.7);
-    @include mq(lgm){
-      transform: rotate3d(0,1,0, 180deg);
-      backface-visibility: hidden;
-    }
-    & h2{
+  & a{
+    display: inline-block;
+    & figure figcaption h2{
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -113,5 +67,3 @@
     }
   }
 }
-
-

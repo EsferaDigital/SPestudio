@@ -1,11 +1,22 @@
 .c-contacto{
-  background-color: color(secondary);
+  width: 90%;
+  margin: auto;
+  min-height: 70vh;
   // border: 2px solid red;
+  @include mq(mdl){
+    margin-top: 5rem;
+  }
+  @include mq(lgm){
+    margin: 0 auto;
+  }
   &-header{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
     padding: 1rem;
     & h1{
       @include titulos;
-      font-weight: 600;
+      font-weight: 500;
     }
     & i{
       display: block;
@@ -13,38 +24,30 @@
     }
   }
   &-form{
-    padding: 1rem;
+    padding: .5rem 1rem;
   }
 }
 
 .c-form{
-  // border: 2px solid green;
   width: 100%;
-  max-width: 50%;
-
-  & item{
+  max-width: 600px;
+  margin: auto;
+  &-item{
     width: 100%;
   }
   & input, textarea{
     width: 100%;
     border: transparent;
     border-bottom: 3px solid black;
-    padding: 1rem 0;
-  }
-  & textarea{
-    padding-bottom: 3rem;
+    padding: 1rem .5rem;
   }
   &-btn{
-    @include boton-cta;
-    width: 5rem;
-    color: white;
-    background-color: black;
-    font-size: 1rem;
-    margin-top: .5rem;
-    border-color: black;
-    @include mq(mdl){
-      width: 7rem;
-      font-size: 1.2rem;
+    @include boton-enviar;
+    margin-top: 1rem;
+    background-color: color(secondary);
+    &:hover{
+      color: white;
+      background-color: black;
     }
   }
 }
@@ -104,14 +107,7 @@
 }
 
 #btnClose{
+  @include boton-cerrar;
+  margin-top: .5rem;
   float: right;
-  font-size: 1rem;
-  padding: .7rem 1.4rem;
-  background-color: color(secondary);
-  cursor: pointer;
-  transition: all .3s ease;
-  &:hover{
-    background-color: black;
-    color: white;
-  }
 }
