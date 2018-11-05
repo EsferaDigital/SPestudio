@@ -1,0 +1,41 @@
+.modal{
+  position: fixed;
+  display: grid;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: z-index(capa10);
+  transform: scale3d(0,0,0);
+  background-color: white;
+  overflow-y: auto;
+  &.zoom-in{
+    animation: zoomIn .5s forwards;
+    @keyframes zoomIn{
+      to{
+        transform: scale3d(1,1,1);
+      }
+    }
+  }
+  &.zoom-out{
+    animation: zoomOut .5s forwards;
+    @keyframes zoomOut{
+      from{
+        transform: scale3d(1,1,1);
+      }
+      to{
+        transform: scale3d(0,0,0);
+      }
+    }
+  }
+}
+
+#close-modal{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.2);
+  }
+}

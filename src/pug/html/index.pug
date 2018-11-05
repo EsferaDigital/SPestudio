@@ -1,8 +1,11 @@
 extends ../template/modelo
 
 block header
- include ../componentes/header
+  include ../componentes/header
 block main
- include ../componentes/home
+  include ../componentes/home
 block footer
- include ../componentes/footer
+  include ../componentes/footer
+block script
+  script(src= jquery)
+  script(src="js/home.js")

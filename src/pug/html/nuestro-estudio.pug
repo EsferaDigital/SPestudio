@@ -1,11 +1,14 @@
 extends ../template/modelo
 append config
-  -titulo = "SPestudio | Nosotras";
+  -titulo = "SPestudio | Nuestro Estudio";
   - descripcion = "Somos una sociedad";
 
 block header
   include ../componentes/header
 block main
-  include ../componentes/nosotras
+  include ../componentes/nuestro-estudio
 block footer
   include ../componentes/footer
+block script
+  script(src= jquery)
+  script(src="js/nuestro.js")
