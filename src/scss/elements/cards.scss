@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  color: white;
+  color: black;
   // border: 1px solid red;
   &:first-child{
     margin-bottom: 1rem;
@@ -14,7 +14,8 @@
 
 .card-team-item{
   display: block;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   // border: 2px solid green;
   @include mq(mdl){
     width: 50%;
@@ -33,24 +34,11 @@
     }
   }
   &-role{
-    position: relative;
-    z-index: 1;
     font-weight: 600;
-    margin-bottom: .5rem;
-    &:before{
-      position: absolute;
-      z-index: -1;
-      content: "";
-      top: 50%;
-      right: 0;
-      width: 40%;
-      border-top: 1px solid white;
-      @include mq(mdl){
-        width: 50%;
-      }
-    }
+    margin: .5rem 0;
   }
   &-description{
+    margin: .5rem 0;
     letter-spacing: 2px;
     @include mq(mdl){
       font-size: 1.5rem;

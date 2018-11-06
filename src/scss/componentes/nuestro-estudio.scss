@@ -1,35 +1,85 @@
 .c-nuestro-estudio{
   background-color: color(secondary);
   border: 2px solid red;
-  &-title{
+}
+
+.c-historia{
+  width: 90%;
+  margin: auto;
+  & h2{
     @include titulos;
-    padding: 0 $gutter;
-    padding-top: 1rem;
+    padding: 1.5rem 0 .5rem;
   }
-  &-team{
-    background-color: color(primary);
+  & p{
+    font-size: 1rem;
+    letter-spacing: 1px;
   }
+  & button{
+    @include boton-enviar;
+    margin: .5rem 0;
+    text-transform: initial;
+    background-color: white;
+    @include mq(lgm){
+      font-size: 1rem;
+    }
+    &:hover{
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+.c-fundadoras{
+  background-color: white;
+  & h2{
+    width: 90%;
+    margin: auto;
+    @include titulos;
+    padding: 1rem 0 .5rem;
+  }
+}
+
+.c-mision{
+  width: 90%;
+  margin: auto;
+  padding: 1rem 0;
 }
 
 .c-valores{
   display: block;
-  width: 90%;
-  margin: 0 auto;
+  background-color: white;
   border: 2px solid green;
+  &-text{
+    width: 90%;
+    margin: auto;
+  }
 }
 
 .c-valores-cards{
   display: block;
+  width: 90%;
+  margin: auto;
   // luego grid
+  @include mq(md){
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mq(lgm){
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .cards-valores{
-  margin: 0;
+  margin: 1rem 0;
+  @include mq(md){
+    margin: 0;
+  }
 }
 
 .cards-valores figcaption{
   display: block;
-  padding: 1.5rem;
+  padding: 1rem;
   color: white;
   border: 2px solid purple;
   & h2{
@@ -42,9 +92,9 @@
     margin: .5rem 0;
   }
   & p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
     padding: .5rem 0;
   }
 }
