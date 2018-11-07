@@ -3,7 +3,9 @@
   display: flex;
   flex-wrap: wrap;
   color: black;
-  // border: 1px solid red;
+  padding: 1rem 0;
+  position: relative;
+  // background-color: color(bg);
   &:first-child{
     margin-bottom: 1rem;
     @include mq(mdl){
@@ -16,21 +18,25 @@
   display: block;
   width: 90%;
   margin: auto;
-  // border: 2px solid green;
+  // border: 2px solid red;
   @include mq(mdl){
     width: 50%;
   }
   & img{
     display: block;
+    @include mq(mdl){
+      width: 90%;
+      margin: auto;
+    }
   }
   & p{
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
   &-name{
     font-size: 1.7rem;
     margin: .5rem 0;
     @include mq(mdl){
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
   }
   &-role{
@@ -38,27 +44,27 @@
     margin: .5rem 0;
   }
   &-description{
+    @include parrafos;
     margin: .5rem 0;
-    letter-spacing: 2px;
     @include mq(mdl){
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
-  &:nth-child(odd){
-    margin: auto;
-    // border: 2px solid purple;
-    @include mq(mdl){
-      padding: .5rem 2rem;
-    }
+  &-cita{
+    margin-top: 1rem;
+    font-family: $secondary-font;
+    font-size: 1rem;
+    // border: 2px solid red;
   }
   &:nth-child(even){
     padding: .5rem;
-    // background-color: color(secondary);
     @include mq(mdl){
       padding: 0 1rem;
     }
   }
 }
+
+
 
 // Contenedor de card rotate debe tener o debe ser grid
 // display: flex;

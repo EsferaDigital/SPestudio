@@ -27,7 +27,7 @@ h6, small{font-size: .75rem;}
 
 // Importar Tipografía
 
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i|Open+Sans&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 $primary-font: Helvetica, sans-serif;
 $secondary-font: 'Lato', sans-serif;
@@ -39,6 +39,12 @@ html {
 
 body{
   font-family: $primary-font;
+}
+
+@mixin parrafos{
+  font-family: $secondary-font;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
 }
 
 

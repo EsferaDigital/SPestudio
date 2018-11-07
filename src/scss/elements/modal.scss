@@ -29,12 +29,23 @@
   }
 }
 
+.c-historia-modal{
+  width: 90%;
+  margin: 3rem auto 1rem;
+  background-color: white;
+  &-img{
+    max-width: 50%;
+    margin: auto;
+  }
+}
+
 #close-modal{
   position: fixed;
   top: 1rem;
-  right: 1rem;
+  right: .5rem;
   padding: 0 1rem;
   cursor: pointer;
+  color: black;
   &:hover{
     transform: scale(1.2);
   }

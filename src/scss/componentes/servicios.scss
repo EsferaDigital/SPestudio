@@ -73,6 +73,9 @@
 
 .c-servicios-description, .c-servicios-img-par, .c-servicios-img-impar{
   width: 100%;
+  & p{
+    font-family: $secondary-font;
+  }
   @include mq(md){
     width: 50%;
   }

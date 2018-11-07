@@ -1,18 +1,25 @@
-.c-nuestro-estudio{
-  background-color: color(secondary);
-  border: 2px solid red;
-}
+// .c-nuestro-estudio{
+//   // background-color: color(secondary);
+//   // border: 2px solid red;
+// }
 
 .c-historia{
   width: 90%;
   margin: auto;
+  background-color: color(secondary);
+  // border: 2px solid red;
+  padding: 1rem;
+  @include mq(mdl){
+    padding: 0 1rem 1rem;
+  }
   & h2{
     @include titulos;
     padding: 1.5rem 0 .5rem;
   }
   & p{
-    font-size: 1rem;
-    letter-spacing: 1px;
+    @include parrafos;
+    padding-bottom: 1rem;
+
   }
   & button{
     @include boton-enviar;
@@ -31,71 +38,184 @@
 
 .c-fundadoras{
   background-color: white;
+  padding-bottom: 1rem;
   & h2{
     width: 90%;
     margin: auto;
     @include titulos;
-    padding: 1rem 0 .5rem;
+    padding: 1rem 0 0;
+  }
+  & figure{
+    width: 90%;
+    margin: 0 auto 1rem;
+    border: 1px solid color(secondary);
+  }
+}
+
+.card-team1{
+  // background-color: red;
+  & .card-team-item:first-child{
+    // border: 3px solid red;
+    max-height: 400px;
+    overflow: hidden;
+  }
+  @include mq(mdl){
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.card-team1-textos{
+  @include mq(mdl){
+    padding: 0 1rem;
   }
 }
 
 .c-mision{
   width: 90%;
   margin: auto;
-  padding: 1rem 0;
+  padding: 1rem;
+  background-color: color(secondary);
+  // border: 2px solid red;
+  @include mq(mdl){
+    display: flex;
+    justify-content: space-between;
+  }
+  &-item{
+    // border: 2px solid green;
+    margin-bottom: 1rem;
+    @include mq(mdl){
+      width: 49%;
+    }
+    & h2{
+      @include sub-titulos;
+      border-bottom: 1px solid black;
+      padding-bottom: .5rem;
+      margin-bottom: .5rem;
+    }
+    & p{
+      @include parrafos;
+    }
+  }
 }
 
 .c-valores{
   display: block;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1rem;
   background-color: white;
-  border: 2px solid green;
+  border: 1px solid color(secondary);
+  @include mq(lgs){
+    padding-bottom: 0;
+  }
   &-text{
-    width: 90%;
+    width: 100%;
     margin: auto;
+    & h2{
+      @include titulos;
+      padding-top: 1rem;
+    }
+    & p{
+      @include parrafos;
+    }
   }
 }
 
 .c-valores-cards{
   display: block;
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  padding-top: 1rem;
+  // border: 1px solid red;
   // luego grid
+  @include mq(smm){
+    margin: 1rem auto;
+    // padding: .5rem 0;
+    // border: 1px solid color(secondary);
+  }
   @include mq(md){
     display: grid;
-    grid-gap: 1rem;
+    padding: 1.5rem;
+    grid-gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 0;
+  }
+  @include mq(lgs){
+    grid-template-columns: 1fr 1fr 1fr;
+    // border: 1px solid color(secondary);
+    margin: 1rem auto;
+    // background-color: red;
+    padding: 0;
   }
   @include mq(lgm){
-    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    border: none;
+    margin: 1rem auto;
+    padding: 0;
+    // border: 1px solid red;
   }
 }
 
 .cards-valores{
   margin: 1rem 0;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  @include mq(smm){
+    width: 90%;
+    margin: 1rem auto;
+    height: auto;
+  }
   @include mq(md){
+    width: 100%;
     margin: 0;
   }
 }
 
 .cards-valores figcaption{
   display: block;
-  padding: 1rem;
+  padding: 1rem 1.3rem;
   color: white;
-  border: 2px solid purple;
+  // border: 2px solid rgb(250, 149, 250);
+  @include mq(lgm){
+    padding: .7rem;
+  }
   & h2{
     font-weight: 500;
     text-align: center;
-    padding: .5rem;
+    padding: .5rem 0;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    @include mq(smm){
+      font-size: 1.5rem;
+    }
+    @include mq(lgm){
+      font-size: 1.2rem;
+    }
   }
   & hr{
     border: 1px solid yellow;
     margin: .5rem 0;
+    @include mq(lgm){
+      margin: .2rem 0;
+    }
   }
   & p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 1px;
-    line-height: 1.2rem;
+    line-height: 1.1rem;
     padding: .5rem 0;
+    font-family: $secondary-font;
+    @include mq(smm){
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+    }
+    @include mq(lgm){
+      font-size: .9rem;
+      line-height: .9rem;
+      padding: .2rem 0;
+    }
   }
 }
 

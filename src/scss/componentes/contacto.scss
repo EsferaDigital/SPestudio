@@ -14,13 +14,16 @@
     max-width: 600px;
     margin: auto;
     padding: 1rem;
+    font-family: $secondary-font;
     & h1{
       @include titulos;
       font-weight: 500;
+      font-family: $primary-font;
     }
-    & i{
+    & p{
       display: block;
       margin: 1rem 0;
+      text-transform: initial;
     }
   }
   &-form{
@@ -40,6 +43,7 @@
     border: transparent;
     border-bottom: 3px solid black;
     padding: 1rem .5rem;
+    font-family: $secondary-font;
   }
   &-btn{
     @include boton-enviar;

@@ -18,6 +18,8 @@
 }
 .c-main{
   grid-area: main;
+  max-width: $max-width;
+  margin: auto;
   // background-color: color(secondary);
   // border: 3px solid green;
   // padding: 0 5rem;

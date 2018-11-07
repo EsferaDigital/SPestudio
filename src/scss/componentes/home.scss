@@ -56,6 +56,7 @@
       padding: 1rem;
       font-size: 1.5rem;
       text-transform: uppercase;
+      font-family: $secondary-font;
       @include mq(mdl){
         font-size: .8rem;
         line-height: 1rem;

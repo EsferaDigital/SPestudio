@@ -10,6 +10,8 @@
   // transition: all .4s ease;
   @include mq(lgm){
     grid-template-areas: "logo menu menu";
+    width: 90%;
+    margin: auto;
   }
   &-logo{
     grid-area: logo;
@@ -34,6 +36,8 @@
     justify-self: end;
     margin-right: 1rem;
     color: color(primary);
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     cursor: pointer;
     @include mq(mdl){
       font-size: 1.3rem;
@@ -84,6 +88,7 @@
     justify-self: end;
     align-self: center;
     margin-right: 1rem;
+    font-size: 1.5rem;
     // border: 1px solid purple;
     @include mq(lgm){
       display: none;
@@ -139,7 +144,7 @@
     & i{
       color: color(text);
       padding: .5rem;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
   }
 }
