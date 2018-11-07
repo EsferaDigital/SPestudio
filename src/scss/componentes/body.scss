@@ -2,6 +2,7 @@
   position: relative;
   z-index: z-index(capa1);
   display: grid;
+  min-height: 100vh;
   grid-template-areas:
               "header"
               "main"
@@ -20,7 +21,10 @@
 .c-main{
   grid-area: main;
   max-width: $max-width;
-  margin: auto;
+  margin: 0;
+  @include mq(lg){
+    margin: auto;
+  }
   // background-color: color(secondary);
   // border: 3px solid green;
   // padding: 0 5rem;
