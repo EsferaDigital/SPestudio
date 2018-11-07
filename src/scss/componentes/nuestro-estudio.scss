@@ -37,23 +37,26 @@
 }
 
 .c-fundadoras{
-  background-color: white;
-  padding-bottom: 1rem;
+  width: 90%;
+  margin: 1rem auto;
+  // padding-bottom: 1rem;
+  border: 1px solid color(secondary);
   & h2{
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    color: black;
     @include titulos;
-    padding: 1rem 0 0;
+    padding: 1rem 1rem 0;
   }
   & figure{
-    width: 90%;
-    margin: 0 auto 1rem;
-    border: 1px solid color(secondary);
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    // border: 1px solid color(secondary);
   }
 }
 
 .card-team1{
-  // background-color: red;
+  background-color: white;
   & .card-team-item:first-child{
     // border: 3px solid red;
     max-height: 400px;

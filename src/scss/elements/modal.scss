@@ -2,12 +2,13 @@
   position: fixed;
   display: grid;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   z-index: z-index(capa10);
   transform: scale3d(0,0,0);
   background-color: white;
   overflow-y: auto;
+  // margin-right: -10px;
   &.zoom-in{
     animation: zoomIn .5s forwards;
     @keyframes zoomIn{
@@ -33,9 +34,27 @@
   width: 90%;
   margin: 3rem auto 1rem;
   background-color: white;
+  border: 1px solid color(secondary);
+  padding: .5rem;
+  @include mq(smm){
+    padding: 1rem;
+  }
+  @include mq(smmH){
+    padding: 1.5rem;
+  }
+  & p{
+    @include parrafos;
+    margin-bottom: .5rem;
+  }
+  & strong{
+    @include parrafos;
+  }
+  & i{
+    @include parrafos;
+  }
   &-img{
-    max-width: 50%;
-    margin: auto;
+    width: 90%;
+    margin: 1rem auto 0;
   }
 }
 
