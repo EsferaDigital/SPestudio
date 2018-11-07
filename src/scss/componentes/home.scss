@@ -8,24 +8,36 @@
     display: block;
   }
   &-servicios{
-    width: 100%;
-    // margin: auto;
-    display: flex;
-    align-content: space-around;
-    // flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    // background-color: color(secondary);
-    // margin: auto;
-    // border: 2px solid green;
+    width: 90%;
+    margin: 1rem auto;
+    border: 1px solid color(secondary);
+    @include mq(md){
+      display: grid;
+      grid-gap: 1.5rem;
+      padding: 0 1.5rem 1.5rem;
+      grid-template-areas:
+                    "titulo titulo"
+                    "diseno asesoria"
+                    "hoteles vitrinas";
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, minmax(min-content, max-content));
+    }
+    @include mq(lgm){
+      grid-template-areas:
+                    "titulo titulo titulo titulo"
+                    "diseno asesoria hoteles vitrinas";
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, minmax(min-content, max-content));
+    }
     & h2{
-      width: 100%;
-      padding: 1rem 0;
-      font-size: 2rem;
-      font-weight: 500;
-      text-align: center;
-      @include mq(mdl){
-        width: 95%;
+      @include titulos;
+      width: 90%;
+      margin: auto;
+      padding: 1rem 0 0;
+      @include mq(md){
+        width: 100%;
+        padding: 1.5rem 0 0;
+        grid-area: titulo;
       }
     }
   }
@@ -35,11 +47,11 @@
 }
 
 .cards-home{
+  width: 90%;
+  margin: 1rem auto;
   @include mq(md){
-    width: 47%;
-  }
-  @include mq(mdl){
-    width: 22%;
+    width: 100%;
+    margin: 0 auto;
   }
   & a{
     display: inline-block;
@@ -57,14 +69,20 @@
       font-size: 1.5rem;
       text-transform: uppercase;
       font-family: $secondary-font;
-      @include mq(mdl){
-        font-size: .8rem;
-        line-height: 1rem;
+      @include mq(md){
+        font-size: 1.5rem;
+        padding: .5rem;
+        width: 80%;
       }
       @include mq(lgm){
         line-height: 2rem;
         font-size: 1.5rem;
+        width: 85%;
       }
     }
   }
+}
+
+.serv-1{
+  grid-area: diseno;
 }

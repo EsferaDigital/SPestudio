@@ -14,6 +14,7 @@
 
 .c-header{
   grid-area: header;
+  max-width: $max-width;
   // border: 1px solid red;
 }
 .c-main{
@@ -27,5 +28,6 @@
 
 .c-footer{
   grid-area: footer;
+  max-width: $max-width;
   // border: 1px solid yellow;
 }
