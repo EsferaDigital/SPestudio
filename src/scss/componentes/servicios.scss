@@ -34,16 +34,44 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  & .c-servicios-img{
+    order: -1;
+  }
 }
 
 .c-servicios-description{
+  // border: 2px solid red;
+  margin-bottom: 1rem;
+  @include mq(md){
+    padding: 1rem;
+    margin-bottom: 0;
+  }
   & h2{
     font-size: 1.5rem;
     letter-spacing: 1px;
     font-weight: 500;
+    @include mq(md){
+      font-size: 1.6rem;
+    }
   }
   & p{
     @include parrafos;
     margin: .5rem 0;
+  }
+}
+
+.c-servicios-img{
+  // border: 2px solid black;
+  align-self: center;
+  justify-self: center;
+  @include mq(md){
+    padding: 1rem;
+  }
+  & img{
+    width: auto;
+    max-height: 300px;
+    @include mq(lgm){
+      max-height: 350px;
+    }
   }
 }

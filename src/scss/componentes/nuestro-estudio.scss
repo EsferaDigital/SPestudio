@@ -42,10 +42,15 @@
   // padding-bottom: 1rem;
   border: 1px solid color(secondary);
   & h2{
-    width: 100%;
-    color: black;
     @include titulos;
+    width: 100%;
+    margin: auto;
     padding: 1rem 1rem 0;
+    color: black;
+    &::before{
+      right: 1rem;
+      width: 28%;
+    }
   }
   & figure{
     width: 100%;
