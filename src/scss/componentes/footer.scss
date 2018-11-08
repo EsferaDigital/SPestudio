@@ -1,5 +1,6 @@
 .c-footer{
   display: grid;
+  // border: 2px solid red;
   grid-template-areas:
                 "up"
                 "sociales"
@@ -45,9 +46,11 @@
   grid-area: up;
   color: color(text);
   font-size: 2.5rem;
+  // border: 1px solid red;
   cursor: pointer;
   @include mq(mdl){
     font-size: 3rem;
+    justify-self: end;
   }
 }
 
@@ -57,6 +60,10 @@
 
 .c-footer-right{
   grid-area: right;
+  @include mq(mdl){
+    justify-self: start;
+    margin-left: 1rem;
+  }
 }
 
 .c-footer-creditos{
