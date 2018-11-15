@@ -17,18 +17,25 @@
     align-items: center;
   }
   &-sociales i{
-    font-size: 1.2rem;
+    font-size: 1.7rem;
+    padding: 0 1rem;
     color: color(text);
     @include mq(mdl){
-      font-size: 1.5rem;
-      padding: 0 1rem;
+      font-size: 2rem;
+      padding: 1rem 1rem 0;
     }
   }
   &-right{
     color: color(text);
+    align-self: end;
+    @include mq(mdl){
+      align-self: center;
+    }
   }
   &-creditos{
     color: color(text);
+    align-self: end;
+    padding-bottom: .5rem;
     & p{
       font-size: .9rem;
       & a{

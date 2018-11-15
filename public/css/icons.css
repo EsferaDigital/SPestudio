@@ -71,3 +71,6 @@
 .icon-instagram:before {
   content: "\6c";
 }
+.icon-home:before {
+  content: "\67";
+}

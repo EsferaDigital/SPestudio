@@ -13,7 +13,9 @@
   @include mq(lgm){
     // margin: 0 auto;
     margin-top: .5rem;
-    max-width: 800px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
   &-header{
     width: 100%;
@@ -21,6 +23,10 @@
     margin: auto;
     padding: 1rem;
     font-family: $secondary-font;
+    @include mq(lgm){
+      max-width: 800px;
+      // border: 2px solid red;
+    }
     & h1{
       @include titulos;
       font-weight: 500;
@@ -40,7 +46,7 @@
 .c-form{
   width: 100%;
   margin: auto;
-  max-width: 600px;
+  max-width: 800px;
   // border: 1px solid green;
   &-item{
     width: 100%;
