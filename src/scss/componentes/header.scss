@@ -56,7 +56,7 @@
               "close"
               "menu"
               "sociales";
-  grid-template-rows: 11% 12rem 2rem;
+  grid-template-rows: 11% 14rem 2rem;
   top: 0;
   right: -$off-canvas;
   width: $off-canvas;
@@ -65,13 +65,13 @@
   background-color: color(primary1);
   transition: all .4s ease;
   @include mq(sm){
-    grid-template-rows: 9.5% 12rem 2rem;
+    grid-template-rows: 9.5% 14rem 2rem;
   }
   @include mq(smH){
-    grid-template-rows: 16% 12rem 2rem;
+    grid-template-rows: 16% 14rem 2rem;
   }
   @include mq(lgsH){
-    grid-template-rows: 22% 12rem 2rem;
+    grid-template-rows: 22% 14rem 2rem;
   }
   @include mq(lgm){
     grid-area: menu;

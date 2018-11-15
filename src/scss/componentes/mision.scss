@@ -1,0 +1,50 @@
+.c-mision{
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  background-color: color(secondary);
+  // border: 2px solid red;
+  @include mq(mdl){
+    display: flex;
+    justify-content: space-between;
+  }
+  &-item{
+    // border: 2px solid green;
+    margin-bottom: 1rem;
+    @include mq(mdl){
+      width: 49%;
+    }
+    & h2{
+      @include sub-titulos;
+      border-bottom: 1px solid black;
+      padding-bottom: .5rem;
+      margin-bottom: .5rem;
+    }
+    & p{
+      @include parrafos;
+    }
+  }
+}
+
+.c-valores{
+  display: block;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid color(secondary);
+  // @include mq(lgs){
+  //   padding-bottom: 0;
+  // }
+  &-text{
+    width: 100%;
+    margin: auto;
+    & h2{
+      @include titulos;
+      padding-top: 1rem;
+    }
+    & p{
+      @include parrafos;
+    }
+  }
+}
