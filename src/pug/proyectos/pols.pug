@@ -1,8 +1,17 @@
 main.c-main
   section.c-proyecto
-    .c-proyecto-banner
-      img(src=proyecto.pols.img, alt=proyecto.pols.alt)
+    .c-proyecto-banner#laCaverna
+      h1.c-proyecto-title=proyecto.pols.name
+      p.c-proyecto-subtitle=proyecto.pols.subtitle
     .c-proyecto-textos
+      h2.c-proyecto-name=proyecto.pols.name
+      p.c-proyecto-surname=proyecto.pols.surname
+      p.c-proyecto-description=proyecto.pols.description
     .c-proyecto-imagen
       img(src=proyecto.pols.img, alt=proyecto.pols.alt)
     .c-proyecto-compare
+      h3 Antes y Después
+      p Acá me faltan las fotos para poder hacer lo que habiamos acordado, una imagen con el antes y otra con el después.
+      .c-proyecto-compare-imagenes
+        img(src=proyecto.pols.img640a)
+        img(src=proyecto.pols.img640b)

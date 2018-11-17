@@ -1,8 +1,17 @@
 main.c-main
   section.c-proyecto
-    .c-proyecto-banner
-      img(src=proyecto.hotel.img, alt=proyecto.hotel.alt)
+    .c-proyecto-banner#laCaverna
+      h1.c-proyecto-title=proyecto.hotel.name
+      p.c-proyecto-subtitle=proyecto.hotel.subtitle
     .c-proyecto-textos
+      h2.c-proyecto-name=proyecto.hotel.name
+      p.c-proyecto-surname=proyecto.hotel.surname
+      p.c-proyecto-description=proyecto.hotel.description
     .c-proyecto-imagen
       img(src=proyecto.hotel.img, alt=proyecto.hotel.alt)
     .c-proyecto-compare
+      h3 Antes y Después
+      p Acá me faltan las fotos para poder hacer lo que habiamos acordado, una imagen con el antes y otra con el después.
+      .c-proyecto-compare-imagenes
+        img(src=proyecto.hotel.img640a)
+        img(src=proyecto.hotel.img640b)

@@ -1,13 +1,17 @@
 main.c-main
   section.c-proyecto
-    .c-proyecto-banner
-      img(src=proyecto.pizza.img, alt=proyecto.pizza.alt)
+    .c-proyecto-banner#pizza
+      h1.c-proyecto-title=proyecto.pizza.name
+      p.c-proyecto-subtitle=proyecto.pizza.subtitle
     .c-proyecto-textos
-      h3.proyecto-title Pizzería La Fermata.
-      h4.proyecto-subtitle Pizzería artesanal ubicada en el centro de Avenida Libertad.
-      p.proyecto-description Proyecto: Remodelación de terraza interior, primer piso y segundo piso. Cambio en revestimiento de muros, pintura. Ilustraciones diseñadas en base a imagen corporativa. Estudio de marca en el espacio. Diseño de cielo interior, mobiliario, iluminación. Apertura de ambientes.
+      h2.c-proyecto-name=proyecto.pizza.name
+      p.c-proyecto-surname=proyecto.pizza.surname
+      p.c-proyecto-description=proyecto.pizza.description
     .c-proyecto-imagen
       img(src=proyecto.pizza.img, alt=proyecto.pizza.alt)
     .c-proyecto-compare
-      .compare-img1
-      .compare-img2
+      h3 Antes y Después
+      p Acá me faltan las fotos para poder hacer lo que habiamos acordado, una imagen con el antes y otra con el después.
+      .c-proyecto-compare-imagenes
+        img(src=proyecto.pizza.img640a)
+        img(src=proyecto.pizza.img640b)

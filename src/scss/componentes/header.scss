@@ -158,3 +158,9 @@
 .show-menu{
   right: 0;
 }
+
+.active{
+  @include mq(lgs){
+    background-color: color(secondary) !important;
+  }
+}

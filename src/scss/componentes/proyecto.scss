@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-image: img('caverna1.jpg');
+    background-image: img('caverna-banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -100,4 +100,16 @@
 .c-proyecto-description{
   @include parrafos;
   margin-top: .5rem;
+}
+
+#pizza{
+  background-image: img('fermata-banner.jpg');
+}
+
+#pastel{
+  background-image: img('color-pastel-banner.jpg');
+}
+
+#optica{
+  background-image: img('optica-banner.jpg');
 }

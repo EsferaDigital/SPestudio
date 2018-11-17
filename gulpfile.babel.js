@@ -69,14 +69,25 @@ gulp.task('lint', () => {
 
 // 5° Toma los archivos js activos, los pasa por babel, avisa posibles errores, concatena los archivos, los minifica y los envía a la carpeta public
 
-gulp.task('javascript', ['lint'], () => {
+gulp.task('globaljs', ['lint'], () => {
 	//Para que los tome todos se usa ** si usara uno solo * tomaría cualquiera
 	gulp.src('./src/js/activos/**.js')
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(babel({
 			presets: ['@babel/env']
 		}))
-		.pipe(concat('all.min.js'))
+		.pipe(concat('global.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('./public/js'));
+});
+
+gulp.task('uniquejs', ['lint'], () => {
+	//Para que los tome todos se usa ** si usara uno solo * tomaría cualquiera
+	gulp.src('./src/js/unicos/**.js')
+		.pipe(plumber({ errorHandler: onError }))
+		.pipe(babel({
+			presets: ['@babel/env']
+		}))
 		.pipe(uglify())
 		.pipe(gulp.dest('./public/js'));
 });
@@ -104,10 +115,10 @@ gulp.task('server', function () {
 
 	gulp.watch('./src/pug/*/*.pug', ['pug2html']).on("change", bs.reload)
 	gulp.watch('./src/scss/*/*.scss', ['sass', 'cache']).on("change", bs.reload)
-	gulp.watch('./src/js/activos/*.js', ['javascript', 'cache']).on("change", bs.reload)
+	gulp.watch('./src/js/activos/*.js', ['globaljs', 'cache']).on("change", bs.reload)
 	gulp.watch('./src/img/*.*', ['imagemin']).on("change", bs.reload)
 })
 
 // 8° Pone en ejecución toda la programación al comando gulp por consola
 
-gulp.task('default', ['pug2html', 'sass', 'javascript', 'imagemin', 'server'], function () {});
+gulp.task('default', ['pug2html', 'sass', 'globaljs', 'uniquejs', 'imagemin', 'server'], function () {});

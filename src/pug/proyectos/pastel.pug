@@ -1,13 +1,17 @@
 main.c-main
   section.c-proyecto
-    .c-proyecto-banner
-      img(src=proyecto.pastel.img, alt=proyecto.pastel.alt)
+    .c-proyecto-banner#pastel
+      h1.c-proyecto-title=proyecto.pastel.name
+      p.c-proyecto-subtitle=proyecto.pastel.subtitle
     .c-proyecto-textos
-      h3.proyecto-title Pastelería Color Pastel.
-      h4.proyecto-subtitle Atelier de pastelería artesanal, especializada en tortas, pasteles y bocadillos temáticos.
-      p.proyecto-description Proyecto: Diseño y remodelación completa de tienda.
+      h2.c-proyecto-name=proyecto.pastel.name
+      p.c-proyecto-surname=proyecto.pastel.surname
+      p.c-proyecto-description=proyecto.pastel.description
     .c-proyecto-imagen
       img(src=proyecto.pastel.img, alt=proyecto.pastel.alt)
     .c-proyecto-compare
-      .compare-img1
-      .compare-img2
+      h3 Antes y Después
+      p Acá me faltan las fotos para poder hacer lo que habiamos acordado, una imagen con el antes y otra con el después.
+      .c-proyecto-compare-imagenes
+        img(src=proyecto.pastel.img640a)
+        img(src=proyecto.pastel.img640b)

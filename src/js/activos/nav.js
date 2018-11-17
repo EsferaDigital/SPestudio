@@ -20,7 +20,6 @@ mainNav.addEventListener('mouseleave', hideMenu);
 openMenu.addEventListener('click', showMenu);
 closeMenu.addEventListener('click', hideMenu);
 
-// Funcion subir
 
 function efectos(){
   $('#up').on('click', function(){
@@ -32,5 +31,19 @@ function efectos(){
 }
 
 $(document).ready(efectos);
+
+// $(document).ready(function(){
+//   $('#up').on('click', function(){
+//     $('html, body').animate({
+//       scrollTop: 0,
+//       scrollLeft: 0
+//     }, 1000);
+//   });
+//   $('#mainMenu li').click(function(e) {
+//     // e.preventDefault();
+//     $('.c-nav-menu-item').removeClass('active');
+//     $(this).addClass('active');
+//   });
+// });
 
 
