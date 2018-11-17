@@ -21,29 +21,44 @@ openMenu.addEventListener('click', showMenu);
 closeMenu.addEventListener('click', hideMenu);
 
 
-function efectos(){
-  $('#up').on('click', function(){
-    $('html, body').animate({
-      scrollTop: 0,
-      scrollLeft: 0
-    }, 1000);
-  });
-}
-
-$(document).ready(efectos);
-
-// $(document).ready(function(){
+// function efectos(){
 //   $('#up').on('click', function(){
 //     $('html, body').animate({
 //       scrollTop: 0,
 //       scrollLeft: 0
 //     }, 1000);
 //   });
-//   $('#mainMenu li').click(function(e) {
-//     // e.preventDefault();
-//     $('.c-nav-menu-item').removeClass('active');
-//     $(this).addClass('active');
-//   });
-// });
+// }
+
+// $(document).ready(efectos);
+
+$(document).ready(function(){
+  var nav = $('#mainNav');
+  var title = $('head').find('title').text();
+  if(title == "SPestudio"){
+    nav.find('#home').addClass('active');
+  }
+  if(title == "SPestudio | Nuestro Estudio"){
+    nav.find('#estudio').addClass('active');
+  }
+  if(title == "SPestudio | Servicios"){
+    nav.find('#servicios').addClass('active');
+  }
+  if(title == "SPestudio | Misión"){
+    nav.find('#mision').addClass('active');
+  }
+  if(title == "SPestudio | Proyectos"){
+    nav.find('#proyectos').addClass('active');
+  }
+  if(title == "SPestudio | Contacto"){
+    nav.find('#contacto').addClass('active');
+  }
+  $('#up').on('click', function(){
+    $('html, body').animate({
+      scrollTop: 0,
+      scrollLeft: 0
+    }, 1000);
+  });
+});
 
 
