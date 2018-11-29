@@ -42,7 +42,16 @@
     }
   }
   &-proyectos{
-    border: 2px solid red;
+    width: 90%;
+    margin: 1rem auto;
+    border: 1px solid color(secondary);
+    padding-bottom: 1rem;
+    &-title{
+      @include titulos;
+      width: 90%;
+      margin: auto;
+      padding: 1rem 0 ;
+    }
   }
 }
 

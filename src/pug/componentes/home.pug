@@ -1,34 +1,38 @@
 main.c-main
   div.c-home
-    div.c-home-logo
-      img(src="img/spestudio.png", alt="Logo")
-    section.c-home-slider
-      include slider
+    section.c-home-banner
+      article.c-home-banner-article
+        .c-home-banner-article-title Especialistas en diseño integral y coherente de espacios comerciales.
+        p.c-home-banner-article-subtitle Abordamos los proyectos a partir del estudio del fundamento del negocio, para luego generar la aplicacion de marca dentro del espacio, la ejecución de interiorismo y papelería.
+      .c-home-banner-img
+        img(src="img/peluqueria.jpg")
     section.c-home-servicios
-      h2 Servicios
-      .cards-rotate.cards-home.serv-1
-        a(href=link.servicios)
-          figure.cards-rotate-figure
-            img(src="img/diseno.jpg", alt="Diseño").cards-rotate-figure-img
-            figcaption.cards-rotate-figure-figcaption
-              h2.c-figure-trasera-t Diseño Locales Comerciales
-      .cards-rotate.cards-home
-        a(href=link.servicios)
-          figure.cards-rotate-figure
-            img(src="img/asesoria.jpg", alt="Asesoria").cards-rotate-figure-img
-            figcaption.cards-rotate-figure-figcaption
-              h2.c-figure-trasera-t Asesoría de decoración integral
-      .cards-rotate.cards-home
-        a(href=link.servicios)
-          figure.cards-rotate-figure
-            img(src="img/hoteles.jpg", alt="Diseño de Hoteles").cards-rotate-figure-img
-            figcaption.cards-rotate-figure-figcaption
-              h2.c-figure-trasera-t Diseño de Hoteles
-      .cards-rotate.cards-home
-        a(href=link.servicios)
-          figure.cards-rotate-figure
-            img(src="img/vitrinas.jpg", alt="Diseño de Vitrinas").cards-rotate-figure-img
-            figcaption.cards-rotate-figure-figcaption
-              h2.c-figure-trasera-t Diseño de Vitrinas
-    section.c-home-proyectos
-      h2.c-home-proyect-title Proyectos
+      h2 Nuestros Servicios
+      .c-home-servicios-gallery
+        .c-home-servicios-gallery-img
+          img(src="img/diseno.jpg")
+        p.c-home-servicios-gallery-text Diseño de locales comerciales
+        .c-home-servicios-gallery-img
+          img(src="img/asesoria.jpg")
+        p.c-home-servicios-gallery-text Asesoría de decoración integral
+        .c-home-servicios-gallery-img
+          img(src="img/hoteles.jpg")
+        p.c-home-servicios-gallery-text Diseño de Hoteles
+        .c-home-servicios-gallery-img
+          img(src="img/vitrinas.jpg")
+        p.c-home-servicios-gallery-text Diseño de Vitrinas
+    section.c-home-plan
+      p.c-home-plan-title En cada uno de nuestros proyectos implementamos nuestra metodología para lograr los objetivos planteados en tus requerimientos
+      .c-home-plan-img
+        img(src="img/plan.png")
+    section.c-home-contacto
+      .c-home-contacto-header
+        h2 Contacto
+        p.icon-mail contacto@spestudiodiseño.cl
+        p.icon-phone +56 9 12345678
+        .c-home-contacto-header-sociales
+          a(href="https://www.facebook.com/spestudiodiseno/" target="_blank")
+          i.icon-facebook
+          a(href="https://www.instagram.com/semmleryprausestudio/" target="_blank")
+            i.icon-instagram
+

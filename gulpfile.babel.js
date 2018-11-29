@@ -31,7 +31,7 @@ gulp.task('pug2html', function buildHTML() {
 			pretty: true
 		}))
 		.pipe(gulpPugBeautify({ omit_empty: true }))
-		.pipe(htmlmin({ collapseWhitespace: true })) //Activar para minificar
+		// .pipe(htmlmin({ collapseWhitespace: true })) //Activar para minificar
 		.pipe(gulp.dest('./public/'));
 });
 
@@ -71,7 +71,7 @@ gulp.task('lint', () => {
 
 gulp.task('globaljs', ['lint'], () => {
 	//Para que los tome todos se usa ** si usara uno solo * tomaría cualquiera
-	gulp.src('./src/js/activos/**.js')
+	gulp.src('./src/js/globales/**.js')
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(babel({
 			presets: ['@babel/env']
@@ -87,7 +87,7 @@ gulp.task('uniquejs', ['lint'], () => {
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(babel({
 			presets: ['@babel/env']
-		}))
+    }))
 		.pipe(uglify())
 		.pipe(gulp.dest('./public/js'));
 });
@@ -115,7 +115,7 @@ gulp.task('server', function () {
 
 	gulp.watch('./src/pug/*/*.pug', ['pug2html']).on("change", bs.reload)
 	gulp.watch('./src/scss/*/*.scss', ['sass', 'cache']).on("change", bs.reload)
-	gulp.watch('./src/js/activos/*.js', ['globaljs', 'cache']).on("change", bs.reload)
+	gulp.watch('./src/js/**/*.js', ['globaljs', 'uniquejs', 'cache']).on("change", bs.reload)
 	gulp.watch('./src/img/*.*', ['imagemin']).on("change", bs.reload)
 })
 

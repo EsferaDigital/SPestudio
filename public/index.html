@@ -1,1 +1,80 @@
-<!DOCTYPE html><html lang="es-cl"><head><title>SPestudio</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><meta name="description" content="Somos un estudio que se especializa en el desarrollo de diseño integral y coherente de locales comerciales"><link href="css/icons.css?t=1542473502930" rel="stylesheet"><link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"><link rel="stylesheet" type="text/css" href="css/styles.css?t=1542473502930"></head><body class="c-body" id="body"><header class="c-header" id="mainHeader"><h1 class="c-header-logo"><a href="http://localhost:3000/"><img src="img/logo.jpg" alt="Logo SPestudio"></a></h1><i class="c-header-menu icon-menu" id="openMenu"></i><nav class="c-nav" id="mainNav"><i class="icon-close c-nav-close" id="closeMenu"></i><ul class="c-nav-menu"><li class="c-nav-menu-item"><a href="http://localhost:3000/" id="home">Home</a></li><li class="c-nav-menu-item"><a href="http://localhost:3000/nuestro-estudio.html" id="estudio">Nuestro Estudio</a></li><li class="c-nav-menu-item"><a href="http://localhost:3000/servicios.html" id="servicios">Servicios</a></li><li class="c-nav-menu-item"><a href="http://localhost:3000/mision.html" id="mision">Misión</a></li><li class="c-nav-menu-item"><a href="http://localhost:3000/proyectos.html" id="proyectos">Proyectos</a></li><li class="c-nav-menu-item"><a href="http://localhost:3000/contacto.html" id="contacto">Contacto</a></li></ul><div class="c-nav-sociales"><a href="https://www.facebook.com/spestudiodiseno/" target="_blank"><i class="icon-facebook"></i></a><a href="https://www.instagram.com/semmleryprausestudio/" target="_blank"><i class="icon-instagram"></i></a><a href="https://empresas.habitissimo.cl/pro/sp-estudio-diseno-y-remodelacion#1" target="_blank"><i class="icon-home"></i></a></div></nav></header><main class="c-main"><div class="c-home"><div class="c-home-logo"><img src="img/spestudio.png" alt="Logo"></div><section class="c-home-slider"><div class="c-slider"><div class="slider" id="slider"><section class="slider-section"><img src="img/living.jpg" alt="Living"></section><section class="slider-section"><img src="img/peluqueria.jpg" alt="Peluqueria"></section><section class="slider-section"><img src="img/pieza.jpg" alt="Habitación"></section></div><div class="btn-prev" id="btnPrev"><i class="icon-left"></i></div><div class="btn-next" id="btnNext"><i class="icon-right"></i></div></div></section><section class="c-home-servicios"><h2>Servicios</h2><div class="cards-rotate cards-home serv-1"><a href="http://localhost:3000/servicios.html"><figure class="cards-rotate-figure"><img class="cards-rotate-figure-img" src="img/diseno.jpg" alt="Diseño"><figcaption class="cards-rotate-figure-figcaption"><h2 class="c-figure-trasera-t">Diseño Locales Comerciales</h2></figcaption></figure></a></div><div class="cards-rotate cards-home"><a href="http://localhost:3000/servicios.html"><figure class="cards-rotate-figure"><img class="cards-rotate-figure-img" src="img/asesoria.jpg" alt="Asesoria"><figcaption class="cards-rotate-figure-figcaption"><h2 class="c-figure-trasera-t">Asesoría de decoración integral</h2></figcaption></figure></a></div><div class="cards-rotate cards-home"><a href="http://localhost:3000/servicios.html"><figure class="cards-rotate-figure"><img class="cards-rotate-figure-img" src="img/hoteles.jpg" alt="Diseño de Hoteles"><figcaption class="cards-rotate-figure-figcaption"><h2 class="c-figure-trasera-t">Diseño de Hoteles</h2></figcaption></figure></a></div><div class="cards-rotate cards-home"><a href="http://localhost:3000/servicios.html"><figure class="cards-rotate-figure"><img class="cards-rotate-figure-img" src="img/vitrinas.jpg" alt="Diseño de Vitrinas"><figcaption class="cards-rotate-figure-figcaption"><h2 class="c-figure-trasera-t">Diseño de Vitrinas</h2></figcaption></figure></a></div></section><section class="c-home-proyectos"><h2 class="c-home-proyect-title">Proyectos</h2></section></div></main><footer class="c-footer"><i class="icon-up" id="up"></i><div class="c-footer-sociales"><a href="https://www.facebook.com/spestudiodiseno/" alt="Facebook" target="_blank"><i class="icon-facebook" alt="Facebook"></i></a><a href="https://www.instagram.com/semmleryprausestudio/" target="_blank"><i class="icon-instagram"></i></a><a href="https://empresas.habitissimo.cl/pro/sp-estudio-diseno-y-remodelacion#1" target="_blank"><i class="icon-home"></i></a></div><div class="c-footer-right"><p>&copy; Copyright SP Estudio 2018</p></div><div class="c-footer-creditos"><p>Desarrollado por<a href="https://esferadigital.cl" target="_blank"> Esfera Digital</a></p></div></footer><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script><script src="js/global.min.js?t=1542473502930"></script><script src="js/home.js?t=1542473502930"></script></body></html>
+<!DOCTYPE html>
+<html lang="es-cl">
+  <head>
+    <title>SPestudio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="description" content="Somos un estudio que se especializa en el desarrollo de diseño integral y coherente de locales comerciales">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body class="c-body" id="body">
+    <div class="fb_reset" id="fb-root"></div>
+    <script>(function(d, s, id) {   var js, fjs = d.getElementsByTagName(s)[0];   if (d.getElementById(id)) return;   js = d.createElement(s); js.id = id;   js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';   fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="fb-customerchat" page_id="136547833765201"></div>
+    <header class="c-header" id="mainHeader">
+      <h1 class="c-header-logo"><a href="http://localhost:3000/"><img src="img/logo.jpg" alt="Logo SPestudio"></a></h1><i class="c-header-menu icon-menu" id="openMenu"></i>
+      <nav class="c-nav" id="mainNav"><i class="icon-close c-nav-close" id="closeMenu"></i>
+        <ul class="c-nav-menu">
+          <li class="c-nav-menu-item"><a href="http://localhost:3000/" id="home">Home</a></li>
+          <li class="c-nav-menu-item"><a href="http://localhost:3000/nuestro-estudio.html" id="estudio">Nuestro Estudio</a></li>
+          <li class="c-nav-menu-item"><a href="http://localhost:3000/servicios.html" id="servicios">Servicios</a></li>
+          <li class="c-nav-menu-item"><a href="http://localhost:3000/mision.html" id="mision">Misión</a></li>
+          <li class="c-nav-menu-item"><a href="http://localhost:3000/proyectos.html" id="proyectos">Proyectos</a></li>
+          <li class="c-nav-menu-item"><a href="http://localhost:3000/contacto.html" id="contacto">Contacto</a></li>
+        </ul>
+        <div class="c-nav-sociales"><a href="https://www.facebook.com/spestudiodiseno/" target="_blank"><i class="icon-facebook"></i></a><a href="https://www.instagram.com/semmleryprausestudio/" target="_blank"><i class="icon-instagram"></i></a><a href="https://empresas.habitissimo.cl/pro/sp-estudio-diseno-y-remodelacion#1" target="_blank"><i class="icon-home"></i></a></div>
+      </nav>
+    </header>
+    <main class="c-main">
+      <div class="c-home">
+        <section class="c-home-banner">
+          <article class="c-home-banner-article">
+            <div class="c-home-banner-article-title">Especialistas en diseño integral y coherente de espacios comerciales.</div>
+            <p class="c-home-banner-article-subtitle">Abordamos los proyectos a partir del estudio del fundamento del negocio, para luego generar la aplicacion de marca dentro del espacio, la ejecución de interiorismo y papelería.</p>
+          </article>
+          <div class="c-home-banner-img"><img src="img/peluqueria.jpg"></div>
+        </section>
+        <section class="c-home-servicios">
+          <h2>Nuestros Servicios</h2>
+          <div class="c-home-servicios-gallery">
+            <div class="c-home-servicios-gallery-img"><img src="img/diseno.jpg"></div>
+            <p class="c-home-servicios-gallery-text">Diseño de locales comerciales</p>
+            <div class="c-home-servicios-gallery-img"><img src="img/asesoria.jpg"></div>
+            <p class="c-home-servicios-gallery-text">Asesoría de decoración integral</p>
+            <div class="c-home-servicios-gallery-img"><img src="img/hoteles.jpg"></div>
+            <p class="c-home-servicios-gallery-text">Diseño de Hoteles</p>
+            <div class="c-home-servicios-gallery-img"><img src="img/vitrinas.jpg"></div>
+            <p class="c-home-servicios-gallery-text">Diseño de Vitrinas</p>
+          </div>
+        </section>
+        <section class="c-home-plan">
+          <p class="c-home-plan-title">En cada uno de nuestros proyectos implementamos nuestra metodología para lograr los objetivos planteados en tus requerimientos</p>
+          <div class="c-home-plan-img"><img src="img/plan.png"></div>
+        </section>
+        <section class="c-home-contacto">
+          <div class="c-home-contacto-header">
+            <h2>Contacto</h2>
+            <p class="icon-mail">contacto@spestudiodiseño.cl</p>
+            <p class="icon-phone">+56 9 12345678</p>
+            <div class="c-home-contacto-header-sociales"><a href="https://www.facebook.com/spestudiodiseno/" target="_blank"></a><i class="icon-facebook"></i><a href="https://www.instagram.com/semmleryprausestudio/" target="_blank"><i class="icon-instagram"></i></a></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="c-footer"><i class="icon-up" id="up"></i>
+      <div class="c-footer-sociales"><a href="https://www.facebook.com/spestudiodiseno/" alt="Facebook" target="_blank"><i class="icon-facebook" alt="Facebook"></i></a><a href="https://www.instagram.com/semmleryprausestudio/" target="_blank"><i class="icon-instagram"></i></a><a href="https://empresas.habitissimo.cl/pro/sp-estudio-diseno-y-remodelacion#1" target="_blank"><i class="icon-home"></i></a></div>
+      <div class="c-footer-right">
+        <p>&copy; Copyright SP Estudio 2018</p>
+      </div>
+      <div class="c-footer-creditos">
+        <p>Desarrollado por<a href="https://esferadigital.cl" target="_blank"> Esfera Digital</a></p>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/global.min.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>
