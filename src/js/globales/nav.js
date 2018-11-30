@@ -44,9 +44,6 @@ $(document).ready(function(){
   if(title == "SPestudio | Servicios"){
     nav.find('#servicios').addClass('active');
   }
-  if(title == "SPestudio | Misión"){
-    nav.find('#mision').addClass('active');
-  }
   if(title == "SPestudio | Proyectos"){
     nav.find('#proyectos').addClass('active');
   }

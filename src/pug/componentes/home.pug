@@ -35,4 +35,15 @@ main.c-main
           i.icon-facebook
           a(href="https://www.instagram.com/semmleryprausestudio/" target="_blank")
             i.icon-instagram
+      .c-home-contacto-form
+        form(action="enviar.php" id="homeFormulario" name="form" method="POST" class="home-form")
+          .home-form-item
+            input(type="text" id="name" name="nombre" placeholder="Nombre" class="home-form-input")
+          .home-form-item
+            input(type="email" id="email" name="email" placeholder="Nombre" class="home-form-input")
+          .home-form-item
+            textarea(id="message" name="message" placeholder="Nombre" class="home-form-input")
+          .home-form-item
+            button(type="submit" id="btnSend" name="send" value="send" class="home-form-input") Enviar Mensaje
+          #sended
 
