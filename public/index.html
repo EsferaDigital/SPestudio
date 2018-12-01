@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="description" content="Somos un estudio que se especializa en el desarrollo de diseño integral y coherente de locales comerciales">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/icons.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css?t=1543629397900">
+    <link rel="stylesheet" type="text/css" href="css/styles.css?t=1543629397900">
   </head>
   <body class="c-body" id="body">
     <div class="fb_reset" id="fb-root"></div>
@@ -39,14 +39,18 @@
         <section class="c-home-servicios">
           <h2>Nuestros Servicios</h2>
           <div class="c-home-servicios-gallery">
-            <div class="c-home-servicios-gallery-img"><img src="img/diseno.jpg"></div>
-            <p class="c-home-servicios-gallery-text">Diseño de locales comerciales</p>
-            <div class="c-home-servicios-gallery-img"><img src="img/asesoria.jpg"></div>
-            <p class="c-home-servicios-gallery-text">Asesoría de decoración integral</p>
-            <div class="c-home-servicios-gallery-img"><img src="img/hoteles.jpg"></div>
-            <p class="c-home-servicios-gallery-text">Diseño de Hoteles</p>
-            <div class="c-home-servicios-gallery-img"><img src="img/vitrinas.jpg"></div>
-            <p class="c-home-servicios-gallery-text">Diseño de Vitrinas</p>
+            <div class="c-home-servicios-gallery-item"><img src="img/diseno.jpg">
+              <p class="c-home-servicios-gallery-text">Diseño de locales comerciales</p>
+            </div>
+            <div class="c-home-servicios-gallery-item"><img src="img/asesoria.jpg">
+              <p class="c-home-servicios-gallery-text">Asesoría de decoración integral</p>
+            </div>
+            <div class="c-home-servicios-gallery-item"><img src="img/hoteles.jpg">
+              <p class="c-home-servicios-gallery-text">Diseño de Hoteles</p>
+            </div>
+            <div class="c-home-servicios-gallery-item"><img src="img/vitrinas.jpg">
+              <p class="c-home-servicios-gallery-text">Diseño de Vitrinas</p>
+            </div>
           </div>
         </section>
         <section class="c-home-plan">
@@ -54,28 +58,34 @@
           <div class="c-home-plan-img"><img src="img/plan.png"></div>
         </section>
         <section class="c-home-contacto">
-          <div class="c-home-contacto-header">
-            <h2>Contacto</h2>
-            <p class="icon-mail">contacto@spestudiodiseño.cl</p>
-            <p class="icon-phone">+56 9 12345678</p>
-            <div class="c-home-contacto-header-sociales"><a href="https://www.facebook.com/spestudiodiseno/" target="_blank"></a><i class="icon-facebook"></i><a href="https://www.instagram.com/semmleryprausestudio/" target="_blank"><i class="icon-instagram"></i></a></div>
-          </div>
-          <div class="c-home-contacto-form">
-            <form class="home-form" action="enviar.php" id="homeFormulario" name="form" method="POST">
-              <div class="home-form-item">
-                <input class="home-form-input" type="text" id="name" name="nombre" placeholder="Nombre">
-              </div>
-              <div class="home-form-item">
-                <input class="home-form-input" type="email" id="email" name="email" placeholder="Nombre">
-              </div>
-              <div class="home-form-item">
-                <textarea class="home-form-input" id="message" name="message" placeholder="Nombre"></textarea>
-              </div>
-              <div class="home-form-item">
-                <button class="home-form-input" type="submit" id="btnSend" name="send" value="send">Enviar Mensaje</button>
-              </div>
-              <div id="sended"></div>
-            </form>
+          <div class="c-home-contacto-img"><img src="img/dibujo.png"></div>
+          <div class="c-home-formulario">
+            <div class="c-home-contacto-header">
+              <h2>Contacto</h2>
+              <p class="icon-mail">contacto@spestudiodiseño.cl</p>
+              <p class="icon-phone">+56 9 12345678</p>
+              <div class="c-home-contacto-header-sociales"><a href="https://www.facebook.com/spestudiodiseno/" target="_blank"><i class="icon-facebook"></i></a><a href="https://www.instagram.com/semmleryprausestudio/" target="_blank"><i class="icon-instagram"></i></a></div>
+            </div>
+            <div class="c-home-contacto-form">
+              <form class="home-form" action="enviar.php" id="homeFormulario" name="form" method="POST">
+                <div class="home-form-item">
+                  <label class="label-name" for="nombre">Nombre:</label>
+                  <input class="home-form-input" type="text" id="name" name="nombre">
+                </div>
+                <div class="home-form-item">
+                  <label class="label-correo" for="email">Correo:</label>
+                  <input class="home-form-input" type="email" id="email" name="email">
+                </div>
+                <div class="home-form-item">
+                  <label class="label-mensaje" for="message">Mensaje:</label>
+                  <textarea class="home-form-input" id="message" name="message"></textarea>
+                </div>
+                <div class="home-form-item">
+                  <button class="home-form-input" type="submit" id="btnSend" name="send" value="send">Enviar Mensaje</button>
+                </div>
+                <div id="sended"></div>
+              </form>
+            </div>
           </div>
         </section>
       </div>
@@ -90,7 +100,7 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/global.min.js"></script>
-    <script src="js/home.js"></script>
+    <script src="js/global.min.js?t=1543629397900"></script>
+    <script src="js/home.js?t=1543629397900"></script>
   </body>
 </html>

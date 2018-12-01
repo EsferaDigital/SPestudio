@@ -9,41 +9,47 @@ main.c-main
     section.c-home-servicios
       h2 Nuestros Servicios
       .c-home-servicios-gallery
-        .c-home-servicios-gallery-img
+        .c-home-servicios-gallery-item
           img(src="img/diseno.jpg")
-        p.c-home-servicios-gallery-text Diseño de locales comerciales
-        .c-home-servicios-gallery-img
+          p.c-home-servicios-gallery-text Diseño de locales comerciales
+        .c-home-servicios-gallery-item
           img(src="img/asesoria.jpg")
-        p.c-home-servicios-gallery-text Asesoría de decoración integral
-        .c-home-servicios-gallery-img
+          p.c-home-servicios-gallery-text Asesoría de decoración integral
+        .c-home-servicios-gallery-item
           img(src="img/hoteles.jpg")
-        p.c-home-servicios-gallery-text Diseño de Hoteles
-        .c-home-servicios-gallery-img
+          p.c-home-servicios-gallery-text Diseño de Hoteles
+        .c-home-servicios-gallery-item
           img(src="img/vitrinas.jpg")
-        p.c-home-servicios-gallery-text Diseño de Vitrinas
+          p.c-home-servicios-gallery-text Diseño de Vitrinas
     section.c-home-plan
       p.c-home-plan-title En cada uno de nuestros proyectos implementamos nuestra metodología para lograr los objetivos planteados en tus requerimientos
       .c-home-plan-img
         img(src="img/plan.png")
     section.c-home-contacto
-      .c-home-contacto-header
-        h2 Contacto
-        p.icon-mail contacto@spestudiodiseño.cl
-        p.icon-phone +56 9 12345678
-        .c-home-contacto-header-sociales
-          a(href="https://www.facebook.com/spestudiodiseno/" target="_blank")
-          i.icon-facebook
-          a(href="https://www.instagram.com/semmleryprausestudio/" target="_blank")
-            i.icon-instagram
-      .c-home-contacto-form
-        form(action="enviar.php" id="homeFormulario" name="form" method="POST" class="home-form")
-          .home-form-item
-            input(type="text" id="name" name="nombre" placeholder="Nombre" class="home-form-input")
-          .home-form-item
-            input(type="email" id="email" name="email" placeholder="Nombre" class="home-form-input")
-          .home-form-item
-            textarea(id="message" name="message" placeholder="Nombre" class="home-form-input")
-          .home-form-item
-            button(type="submit" id="btnSend" name="send" value="send" class="home-form-input") Enviar Mensaje
-          #sended
+      .c-home-contacto-img
+        img(src="img/dibujo.png")
+      .c-home-formulario
+        .c-home-contacto-header
+          h2 Contacto
+          p.icon-mail contacto@spestudiodiseño.cl
+          p.icon-phone +56 9 12345678
+          .c-home-contacto-header-sociales
+            a(href="https://www.facebook.com/spestudiodiseno/" target="_blank")
+              i.icon-facebook
+            a(href="https://www.instagram.com/semmleryprausestudio/" target="_blank")
+              i.icon-instagram
+        .c-home-contacto-form
+          form(action="enviar.php" id="homeFormulario" name="form" method="POST" class="home-form")
+            .home-form-item
+              label(for="nombre").label-name Nombre:
+              input(type="text" id="name" name="nombre" class="home-form-input")
+            .home-form-item
+              label(for="email").label-correo Correo:
+              input(type="email" id="email" name="email" class="home-form-input")
+            .home-form-item
+              label(for="message").label-mensaje Mensaje:
+              textarea(id="message" name="message" class="home-form-input")
+            .home-form-item
+              button(type="submit" id="btnSend" name="send" value="send" class="home-form-input") Enviar Mensaje
+            #sended
 
