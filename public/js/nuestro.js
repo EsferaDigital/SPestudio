@@ -1,1 +1,1 @@
-"use strict";var open=document.getElementById("open-modal"),modal=document.getElementById("modal"),close=document.getElementById("close-modal");open.addEventListener("click",function(){modal.classList.toggle("zoom-in"),modal.classList.remove("zoom-out")}),close.addEventListener("click",function(){modal.classList.replace("zoom-in","zoom-out")});
+"use strict";

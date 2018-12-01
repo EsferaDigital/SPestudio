@@ -2,6 +2,8 @@
   position: relative;
   z-index: z-index(capa1);
   display: grid;
+  height: auto;
+  overflow-y: auto;
   min-height: 100vh;
   grid-template-areas:
               "header"
@@ -33,6 +35,6 @@
 .c-footer{
   grid-area: footer;
   max-width: $max-width;
-  border: 1px solid yellow;
+  // border: 1px solid yellow;
   padding-top: 1rem;
 }

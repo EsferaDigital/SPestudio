@@ -1,16 +1,17 @@
 .c-footer{
-  width: 90%;
-  margin: auto;
-  margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
+  background-color: color(primary1);
   display: grid;
   grid-template-areas:
                 "up"
                 "sociales"
                 "right"
                 "creditos";
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(minmax(min-content, max-content));
   justify-items: center;
   @include mq(mdl){
+    padding: 0 1rem;
     grid-template-areas:
                   "right sociales up"
                   " . creditos . ";
@@ -39,6 +40,8 @@
     align-self: end;
     padding-bottom: .5rem;
     & p{
+      display: block;
+      width: 100%;
       font-size: .9rem;
       & a{
         font-size: .9rem;
@@ -58,6 +61,7 @@
   // border: 1px solid red;
   cursor: pointer;
   @include mq(mdl){
+    padding-top: .5rem;
     font-size: 3rem;
     justify-self: end;
   }
@@ -65,6 +69,9 @@
 
 .c-footer-sociales{
   grid-area: sociales;
+  @include mq(mdl){
+    padding-top: .5rem;
+  }
 }
 
 .c-footer-right{

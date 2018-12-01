@@ -1,35 +1,43 @@
 .c-home{
-  border: 2px solid red;
+  // border: 2px solid red;
   display: grid;
   grid-template-rows: repeat(4, minmax(1fr, max-content));
-  &-banner{
-    border: 2px solid blue;
-  }
+  // &-banner{
+  //   border: 2px solid blue;
+  // }
   // &-servicios{
   //   border: 2px solid green;
   // }
-  &-plan{
-    border: 2px solid orangered;
-  }
-  &-contacto{
-    border: 2px solid violet;
-  }
+  // &-plan{
+  //   border: 2px solid orangered;
+  // }
+  // &-contacto{
+  //   border: 2px solid violet;
+  // }
 }
 
 .c-home-banner{
   display: grid;
   grid-template-columns: 48% 52%;
   &-article{
-    border: 2px solid red;
+    // border: 2px solid red;
     &-title{
       position: relative;
       z-index: z-index(capa2);
       width: 110%;
-      padding: 4rem .5rem 1rem;
+      padding: 4rem .5rem 1rem 1rem;
       top: 1rem;
       overflow-y: visible;
       background-color: color(secondaryt);
       font-size: 1.3rem;
+      @include mq(lgs){
+        padding: 6rem .5rem 1rem 1rem;
+        font-size: 1.9rem;
+      }
+      @include mq(lgm){
+        width: 105%;
+        padding: 10rem .5rem 1rem 2rem;
+      }
     }
     &-subtitle{
       position: relative;
@@ -38,20 +46,40 @@
       z-index: z-index(capa2);
       overflow-y: visible;
       font-size: .8rem;
-      padding: 1rem .5rem .8rem;
+      padding: 1rem .5rem .8rem 1rem;
+      @include mq(smH){
+        background-color: color(whitet);
+      }
+      @include mq(mdl){
+        padding: 1rem 2rem .8rem 1rem;
+      }
+      @include mq(lgs){
+        font-size: 1rem;
+        padding: 1rem 3rem .8rem 1rem;
+      }
+      @include mq(lgm){
+        width: 105%;
+        padding: 1rem 3rem .8rem 2rem;
+      }
       &:before{
         content: "";
         position: absolute;
         z-index: -1;
-        width: 100%;
+        width: calc(100% - 1rem);
         top: 100%;
         border-bottom: 2px solid color(secondary);
+        @include mq(lgm){
+          width: calc(100% - 2rem);
+        }
       }
     }
   }
   &-img{
-    border: 2px solid #4ca01b;
+    // border: 2px solid #4ca01b;
     align-self: center;
+    & img{
+      display: block;
+    }
   }
 }
 
@@ -63,14 +91,21 @@
   & h2{
     font-size: 1.3rem;
     text-transform: uppercase;
-    padding: .5rem 1rem 2rem .5rem;
+    padding: 2rem 1rem 2rem .5rem;
     font-weight: 500;
+    letter-spacing: 2px;
+    @include mq(lgm){
+      font-size: 1.7rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      padding-bottom: 3rem;
+    }
   }
 }
 
 .c-home-servicios-gallery{
   display: grid;
-  grid-gap: .5rem;
+  grid-gap: 2rem;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
   @include mq(md){
@@ -80,10 +115,15 @@
   }
   &-item{
     border-bottom: 2px solid color(secondary);
+
   }
   &-text{
     text-transform: uppercase;
     padding: 1rem 0;
+    color: color(primary2);
+    @include mq(lgm){
+      font-size: 1.3rem;
+    }
   }
 }
 
@@ -91,9 +131,16 @@
   position: relative;
   top: 1rem;
   margin-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem;
   &-title{
     text-align: center;
+    margin-bottom: 1rem;
+    @include mq(lgs){
+      width: 60%;
+      margin: 2rem auto 0;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+    }
   }
 }
 
@@ -108,9 +155,17 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  @include mq(mdl){
+    background-image: none;
+    grid-template-columns: 1fr 1fr;
+  }
   &-img{
     display: none;
-    border: 2px solid red;
+    // border: 2px solid red;
+    @include mq(mdl){
+      display: block;
+      align-self: center;
+    }
   }
   &-formulario{
     position: absolute;
@@ -119,17 +174,33 @@
 
 .c-home-formulario{
   max-width: 600px;
-  border: 2px solid red;
+  margin: auto;
+  // border: 2px solid red;
   padding: 1rem;
+  @include mq(smH){
+    width: 75%;
+    // border: 2px solid green;
+  }
+  @include mq(mdl){
+    width: 100%;
+  }
 }
 
 .c-home-contacto-header{
   & h2{
     font-size: 1.3rem;
+    font-weight: 500;
     text-transform: uppercase;
   }
+  &-icon i{
+    display: flex;
+    margin: .5rem 0;
+    & p{
+      margin-left: .5rem;
+    }
+  }
   &-sociales{
-    margin: 1rem 0;
+    margin: 1rem 0 2rem;
     & a{
       padding: .5rem;
       border: 1px solid black;
@@ -158,14 +229,14 @@
       text-transform: uppercase;
     }
     & input, textarea{
+      position: relative;
+      top: -.5rem;
       outline: none;
       border: none;
-      width: 15.6rem;
+      border-bottom: 1px solid black;
+      width: 76%;
       margin-left: .5rem;
       background-color: transparent;
-      &:active{
-        border: none ;
-      }
     }
     & button{
       width: 100%;
@@ -177,50 +248,11 @@
   }
 }
 
-.label-name{
-  position: relative;
-  z-index: 1;
-  // border-bottom: 1px solid black;
-  &::before{
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 90%;
-    left: 6rem;
-    border-top: 1px solid black;
-    width: 63.5vw;
-  }
+#email{
+  width: 76%;
 }
 
-.label-correo{
-  position: relative;
-  z-index: 1;
-  // border-bottom: 1px solid black;
-  &::before{
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 90%;
-    left: 6rem;
-    border-top: 1px solid black;
-    width: 63.5vw;
-  }
-}
 
-.label-mensaje{
-  position: relative;
-  z-index: 1;
-  // border-bottom: 1px solid black;
-  &::before{
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 90%;
-    left: 6rem;
-    border-top: 1px solid black;
-    width: 63.5vw;
-  }
-}
 
 button[type=submit]{
   position: relative;
@@ -230,7 +262,7 @@ button[type=submit]{
     content: "";
     position: absolute;
     z-index: -1;
-    top: -50%;
+    top: -80%;
     left: 0;
     border-top: 1px solid black;
     width: 100%;
