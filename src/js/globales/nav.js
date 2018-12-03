@@ -38,7 +38,7 @@ $(document).ready(function(){
   if(title == "SPestudio"){
     nav.find('#home').addClass('active');
   }
-  if(title == "SPestudio | Nuestro Estudio"){
+  if(title == "SPestudio | Nosotros"){
     nav.find('#estudio').addClass('active');
   }
   if(title == "SPestudio | Servicios"){
