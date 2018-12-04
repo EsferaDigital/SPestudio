@@ -1,8 +1,8 @@
 <?php
 // capturamos elementos por su name
-$nombre = $_POST["nombre"];
-$correo = $_POST["correo"];
-$mensaje = $_POST["mensaje"];
+$nombre = $_POST["name"];
+$correo = $_POST["email"];
+$mensaje = $_POST["message"];
 
 // Destinatario
 $destinatario = "contacto@xn--spestudiodiseo-2nb.cl";
@@ -14,4 +14,4 @@ $carta .= "Mensaje: $mensaje";
 
 // Enviando mensaje
 mail($destinatario, $asunto, $carta);
-header("Location: contacto.html");
+header("Location: index.html");

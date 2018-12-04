@@ -32,7 +32,8 @@
     justify-self: end;
   }
   &:hover{
-    color: darken(color(text), 10%);
+    color: white;
+    transform: scale(1.1);
   }
 }
 
@@ -48,7 +49,7 @@
     padding: 0 1rem;
     cursor: pointer;
     &:hover{
-      color: darken(color(text), 10%);
+      color: white;
     }
   }
 }
@@ -85,7 +86,7 @@
     font-size: .8rem;
     letter-spacing: 2px;
     &:hover{
-      color: darken(color(secondary), 10%);
+      color: #249EDB;
     }
   }
 }

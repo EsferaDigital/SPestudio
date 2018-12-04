@@ -48,13 +48,19 @@
   }
   &-imagen{
     width: 90%;
-    margin: auto;
+    margin: 1rem auto;
+    @include mq(md){
+      margin: 2rem auto;
+    }
   }
   &-compare{
     width: 90%;
-    margin: auto;
+    margin: 1rem auto;
     padding: .5rem;
     border: 1px solid color(secondary);
+    @include mq(md){
+      margin: 2rem auto;
+    }
     & h3{
       @include titulos;
       width: 90%;
@@ -95,10 +101,12 @@
 .c-proyecto-surname{
   @include sub-titulos;
   font-size: 1.2rem;
+  letter-spacing: 2px;
 }
 
 .c-proyecto-description{
   @include parrafos;
+  text-transform: initial;
   margin-top: .5rem;
 }
 
@@ -112,4 +120,8 @@
 
 #optica{
   background-image: img('optica-banner.jpg');
+}
+
+#laRosa{
+  background-image: img('emporio-banner.jpg');
 }

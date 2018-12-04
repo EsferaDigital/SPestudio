@@ -5,20 +5,23 @@
   margin: auto;
   padding: 1rem;
   border: 1px solid color(secondary);
-  &::before{
-    right: .5rem;
-  }
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 
 .c-servicios{
   width: 90%;
   margin: auto;
+  margin-bottom: 1rem;
 }
 
 .c-servicios-item1, .c-servicios-item2{
   background-color: color(secondary);
   padding: 1rem;
   border: 1px solid color(secondary);
+  @include mq(md){
+    padding: 2rem 1rem;
+  }
 }
 
 .c-servicios-item1{
@@ -47,11 +50,12 @@
     margin-bottom: 0;
   }
   & h2{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     font-weight: 500;
+    text-transform: uppercase;
     @include mq(md){
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
   }
   & p{

@@ -10,13 +10,13 @@ function validar(e) {
 		e.preventDefault();
 		errores += '<p>Escriba un nombre</p>';
   }
-  if(formulario.email.value == 0){
+  if(formulario.correo.value == 0){
     e.preventDefault();
     errores += '<p>Ingrese un correo</p>'
   }
   if(formulario.mensaje.value == 0){
     e.preventDefault();
-    errores += '<p>Ingrese un mensaje</p>'
+    errores += '<p>Escriba un mensaje</p>'
   }
   if(errores == '' == false){
     let mensajeErrores = `

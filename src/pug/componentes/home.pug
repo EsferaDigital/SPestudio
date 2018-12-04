@@ -33,20 +33,20 @@ main.c-main
           h2 Contacto
           .c-home-contacto-header-icon
             i.icon-mail #[p contacto@spestudiodiseño.cl]
-            i.icon-phone #[p +56 9 12345678]
+            i.icon-phone #[p +56 9 87315832]
           .c-home-contacto-header-sociales
             a(href="https://www.facebook.com/spestudiodiseno/" target="_blank")
               i.icon-facebook
-            a(href="https://www.instagram.com/semmleryprausestudio/" target="_blank")
+            a(href="https://www.instagram.com/spestudiodiseno/" target="_blank")
               i.icon-instagram
         .c-home-contacto-form
-          form(action="enviar.php" id="homeFormulario" name="form" method="POST" class="home-form")
+          form(action="enviar2.php" id="homeForm" name="homeForm" method="POST" class="home-form")
             .home-form-item
               label(for="nombre") Nombre:
-              input(type="text" id="name" name="nombre" class="home-form-input")
+              input(type="text" id="name" name="name" class="home-form-input")
             .home-form-item
               label(for="email") Correo:
-              input(type="email" id="email" name="email" class="home-form-input")
+              input(type="email" id="email" name="email" class="home-form-input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
             .home-form-item
               label(for="message") Mensaje:
               textarea(id="message" name="message" class="home-form-input")

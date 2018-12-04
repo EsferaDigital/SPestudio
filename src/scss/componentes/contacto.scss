@@ -16,14 +16,16 @@
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 3rem;
   }
   &-header{
     width: 100%;
     max-width: 600px;
     margin: auto;
-    padding: 1rem;
+    padding: 1rem 0;
     font-family: $secondary-font;
     @include mq(lgm){
+      padding: 2rem 0;
       max-width: 800px;
       // border: 2px solid red;
     }
@@ -32,14 +34,20 @@
       font-weight: 500;
       font-family: $primary-font;
     }
-    & p{
-      display: block;
-      margin: 1rem 0;
-      text-transform: initial;
-    }
   }
   &-form{
     padding: .5rem 1rem;
+  }
+}
+
+.c-contacto-header-icon{
+  // border: 1px solid red;
+  & i{
+    display: flex;
+    margin: .5rem 0;
+    & p{
+      margin-left: .5rem;
+    }
   }
 }
 
@@ -68,6 +76,8 @@
     @include boton-enviar;
     margin-top: 1rem;
     background-color: color(secondary);
+    outline: none;
+    transition: background-color .5s;
     &:hover{
       color: white;
       background-color: black;
@@ -78,10 +88,6 @@
 #btnEnviar::before{
   border: none;
 }
-
-
-
-
 
 // Modal errores
 
@@ -113,7 +119,7 @@
         display: block;
         width: 100%;
         height: 1px;
-        background: color(secondary);
+        background-color: color(secondary);
         margin: 10px 0 15px;
       }
     }
@@ -132,8 +138,9 @@
   }
 }
 
-#btnClose{
+#btnClose, #btnCerrar{
   @include boton-cerrar;
   margin-top: .5rem;
   float: right;
+  transition: background-color .5s;
 }

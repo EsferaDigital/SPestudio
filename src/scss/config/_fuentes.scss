@@ -43,9 +43,13 @@ body{
 
 @mixin parrafos{
   font-family: $secondary-font;
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: 2px;
   font-weight: 500;
+  text-transform: uppercase;
+  @include mq(md){
+    font-size: 1.2rem;
+  }
 }
 
 

@@ -1,6 +1,6 @@
 .c-proyectos{
   width: 90%;
-  margin: auto;
+  margin: 1rem auto;
   border: 1px solid color(secondary);
   padding-bottom: 1rem;
   &-title{
@@ -55,7 +55,7 @@
     // border: 1px solid purple;
     & p{
       @include parrafos;
-      padding: .5rem;
+      padding: .5rem 0;
     }
   }
 }
