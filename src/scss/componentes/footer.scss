@@ -1,91 +1,91 @@
 .c-footer{
-  width: 100%;
-  height: auto;
   background-color: color(primary1);
-  display: grid;
-  grid-template-areas:
-                "up"
-                "sociales"
-                "right"
-                "creditos";
-  grid-template-rows: repeat(minmax(min-content, max-content));
-  justify-items: center;
+  padding-bottom: .5rem;
   @include mq(mdl){
-    padding: 0 1rem;
+    padding: .5rem 0;
+  }
+}
+
+.container-footer{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  @include mq(mdl){
+    display: grid;
     grid-template-areas:
                   "right sociales up"
                   " . creditos . ";
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    align-items: center;
-  }
-  &-sociales i{
-    font-size: 1.7rem;
-    padding: 0 1rem;
-    color: color(text);
-    @include mq(mdl){
-      font-size: 2rem;
-      padding: 1rem 1rem 0;
-    }
-  }
-  &-right{
-    color: color(text);
-    align-self: end;
-    @include mq(mdl){
-      align-self: center;
-    }
-  }
-  &-creditos{
-    color: color(text);
-    align-self: end;
-    padding-bottom: .5rem;
-    & p{
-      display: block;
-      width: 100%;
-      font-size: .9rem;
-      & a{
-        font-size: .9rem;
-        color: #249edb;
-        &:hover{
-          color: rgba(36, 158, 219, 0.719);
-        }
-      }
-    }
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
   }
 }
 
 #up{
-  grid-area: up;
   color: color(text);
   font-size: 2.5rem;
-  // border: 1px solid red;
   cursor: pointer;
+  padding: .5rem 0;
   @include mq(mdl){
-    padding-top: .5rem;
-    font-size: 3rem;
+    grid-area: up;
+    // border: 1px solid green;
+    padding: 0;
     justify-self: end;
+  }
+  &:hover{
+    color: darken(color(text), 10%);
   }
 }
 
 .c-footer-sociales{
-  grid-area: sociales;
   @include mq(mdl){
-    padding-top: .5rem;
+    grid-area: sociales;
+    // border: 1px solid blue;
+    align-self: center;
+  }
+  & i{
+    font-size: 1.7rem;
+    color: color(text);
+    padding: 0 1rem;
+    cursor: pointer;
+    &:hover{
+      color: darken(color(text), 10%);
+    }
   }
 }
 
 .c-footer-right{
-  grid-area: right;
+  color: color(text);
+  margin: .5rem 0;
+  letter-spacing: 2px;
   @include mq(mdl){
+    grid-area: right;
+    margin: 0;
+    // border: 2px solid red;
+    align-self: center;
     justify-self: start;
-    margin-left: 1rem;
   }
 }
 
 .c-footer-creditos{
-  grid-area: creditos;
+  display: flex;
+  justify-content: center;
+  // border: 1px solid red;
+  color: color(text);
   @include mq(mdl){
-    align-self: end;
-    padding: .5rem 0;
+    grid-area: creditos;
+    // border: 1px solid orange;
+  }
+  & p{
+    margin-right: 3px;
+    font-size: .8rem;
+    letter-spacing: 2px;
+  }
+  & a{
+    color: color(secondary);
+    font-size: .8rem;
+    letter-spacing: 2px;
+    &:hover{
+      color: darken(color(secondary), 10%);
+    }
   }
 }
