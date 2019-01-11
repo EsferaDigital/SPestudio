@@ -60,7 +60,13 @@
   }
   & p{
     @include parrafos;
+    text-transform: initial;
     margin: .5rem 0;
+  }
+  & li{
+    @include parrafos;
+    text-transform: initial;
+    list-style-type: disc;
   }
 }
 
@@ -78,4 +84,8 @@
       max-height: 350px;
     }
   }
+}
+
+.cursiva{
+  font-style: oblique;
 }

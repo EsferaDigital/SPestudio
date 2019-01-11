@@ -22,10 +22,10 @@
 }
 .c-main{
   grid-area: main;
-  max-width: $max-width;
+  // max-width: $max-width;
   margin: 0;
   @include mq(lg){
-    margin: auto;
+    margin: 0;
   }
   // background-color: color(secondary);
   // border: 3px solid green;

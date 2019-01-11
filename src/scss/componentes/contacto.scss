@@ -1,6 +1,6 @@
 .c-contacto{
   width: 95%;
-  max-width: 600px;
+  max-width: 700px;
   margin: 1rem auto;
   border: 1px solid color(secondary);
   padding-bottom: 1rem;
@@ -13,20 +13,27 @@
   @include mq(lgm){
     // margin: 0 auto;
     margin-top: .5rem;
-    max-width: 90%;
+    width: 90%;
+    // max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include mq(lg){
+    width: 90%;
   }
   &-header{
-    width: 100%;
-    max-width: 600px;
+    width: calc(100% - 2rem);
+    // max-width: 600px;
     margin: auto;
     padding: 1rem 0;
     font-family: $secondary-font;
+    // border: 2px solid red;
     @include mq(lgm){
       padding: 2rem 0;
-      max-width: 800px;
+      max-width: 600px;
       // border: 2px solid red;
     }
     & h1{
@@ -37,6 +44,7 @@
   }
   &-form{
     padding: .5rem 1rem;
+    // border: 2px solid red;
   }
 }
 
