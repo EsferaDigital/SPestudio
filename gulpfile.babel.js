@@ -23,6 +23,13 @@ let onError = function (err) {
   this.emit('end');
 }
 
+const imagenminOptions = {
+  progressive: true,
+  optimizationLevel: 3,
+  interlaced: true,
+  svgPlugins: [{removeViewBox: false}]
+}
+
 // 1°Toma cualquier archivo pug, lo pasa a html, lo minifica y crea un archivo html en la raíz si este no existe.
 
 gulp.task('pug2html', function buildHTML() {
@@ -94,13 +101,9 @@ gulp.task('uniquejs', ['lint'], () => {
 
 // 6° Toma todas la imagenes, las optimiza y las envía a la carpeta public
 
-gulp.task('imagemin', function () {
-  return gulp.src('./src/img/*.*')
-    .pipe(plumber({ errorHandler: onError }))
-    .pipe(imagemin({
-      progressive: true,
-      interlaced: true
-    }))
+gulp.task('img', function () {
+  gulp.src('./src/img/*.{png,jpg,jpeg,gif,svg}')
+    .pipe(imagemin(imagenminOptions))
     .pipe(gulp.dest('./public/img'));
 });
 
@@ -116,9 +119,8 @@ gulp.task('server', function () {
   gulp.watch('./src/pug/*/*.pug', ['pug2html']).on("change", bs.reload)
   gulp.watch('./src/scss/*/*.scss', ['sass', 'cache']).on("change", bs.reload)
   gulp.watch('./src/js/**/*.js', ['globaljs', 'uniquejs', 'cache']).on("change", bs.reload)
-  gulp.watch('./src/img/*.*', ['imagemin']).on("change", bs.reload)
 });
 
 // 8° Pone en ejecución toda la programación al comando gulp por consola
 
-gulp.task('default', ['pug2html', 'sass', 'globaljs', 'uniquejs', 'imagemin', 'server'], function () {});
+gulp.task('default', ['pug2html', 'sass', 'globaljs', 'uniquejs', 'server'], function () {});
